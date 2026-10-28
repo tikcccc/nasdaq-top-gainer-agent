@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <title>Report design: three approaches compared, and the pipeline of the chosen one</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="720" rx="18" fill="#ffffff"/>
+  <text x="40" y="50" font-size="28" font-weight="700" fill="#0f172a">Report design</text>
+  <text x="250" y="50" font-size="15" fill="#64748b">who decides what matters, and who writes the sentences</text>
+
+  <!-- row labels -->
+  <g font-size="14" font-weight="700" fill="#334155">
+    <text x="40" y="168">Who writes sentences</text>
+    <text x="40" y="216">Factual reliability</text>
+    <text x="40" y="264">Readability</text>
+    <text x="40" y="312">Agent judgement visible</text>
+    <text x="40" y="360">Can hide bad news</text>
+  </g>
+
+  <!-- column 1 -->
+  <rect x="250" y="84" width="290" height="300" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="395" y="114" font-size="16" font-weight="700" fill="#0f172a" text-anchor="middle">1 · Model writes the prose</text>
+  <line x1="266" y1="132" x2="524" y2="132" stroke="#e2e8f0"/>
+  <g font-size="14" text-anchor="middle">
+    <text x="395" y="168" fill="#334155">the model</text>
+    <text x="395" y="216" fill="#b91c1c">✗ failed in testing</text>
+    <text x="395" y="264" fill="#15803d">✓ most natural</text>
+    <text x="395" y="312" fill="#15803d">✓ strongest</text>
+    <text x="395" y="360" fill="#b91c1c">✗ yes, by omission</text>
+  </g>
+
+  <!-- column 2 -->
+  <rect x="560" y="84" width="290" height="300" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="705" y="114" font-size="16" font-weight="700" fill="#0f172a" text-anchor="middle">2 · Code writes everything</text>
+  <line x1="576" y1="132" x2="834" y2="132" stroke="#e2e8f0"/>
+  <g font-size="14" text-anchor="middle">
+    <text x="705" y="168" fill="#334155">code; model picks news IDs</text>
+    <text x="705" y="216" fill="#15803d">✓ every sentence traceable</text>
+    <text x="705" y="264" fill="#b91c1c">✗ technical, list-like</text>
+    <text x="705" y="312" fill="#b91c1c">✗ almost none</text>
+    <text x="705" y="360" fill="#15803d">✓ no</text>
+  </g>
+
+  <!-- column 3 (chosen) -->
+  <rect x="870" y="70" width="300" height="328" rx="16" fill="#ecfdf5" stroke="#0f766e" stroke-width="3"/>
+  <rect x="1060" y="56" width="96" height="26" rx="13" fill="#0f766e"/>
+  <text x="1108" y="74" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">CHOSEN</text>
+  <text x="1020" y="108" font-size="16" font-weight="700" fill="#0f766e" text-anchor="middle">3 · Model picks emphasis,</text>
+  <text x="1020" y="127" font-size="16" font-weight="700" fill="#0f766e" text-anchor="middle">code writes</text>
+  <line x1="886" y1="140" x2="1154" y2="140" stroke="#a7f3d0"/>
+  <g font-size="14" text-anchor="middle">
+    <text x="1020" y="168" fill="#334155">code, from verified data</text>
+    <text x="1020" y="216" fill="#15803d">✓ same as 2</text>
+    <text x="1020" y="264" fill="#b45309">~ analyst-note style</text>
+    <text x="1020" y="312" fill="#15803d">✓ which facts lead, in order</text>
+    <text x="1020" y="360" fill="#15803d">✓ no: limitation is mandatory</text>
+  </g>
+
+  <!-- pipeline of the chosen design -->
+  <text x="40" y="452" font-size="12.5" font-weight="700" fill="#64748b" letter-spacing="1.2">HOW THE CHOSEN DESIGN BUILDS A REPORT</text>
+
+  <rect x="40" y="472" width="250" height="150" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+  <text x="165" y="504" font-size="16.5" font-weight="700" fill="#0f766e" text-anchor="middle">Agent selects</text>
+  <g font-size="13.5" fill="#134e4a" text-anchor="middle">
+    <text x="165" y="534">news IDs</text>
+    <text x="165" y="558">2–4 key findings, in order</text>
+    <text x="165" y="582">e.g. final_session_share,</text>
+    <text x="165" y="604">volume_spike, vs_sp500</text>
+  </g>
+
+  <rect x="340" y="472" width="250" height="150" rx="14" fill="#e0e7ff" stroke="#1f3a5f" stroke-width="2"/>
+  <text x="465" y="504" font-size="16.5" font-weight="700" fill="#1f3a5f" text-anchor="middle">Validator</text>
+  <g font-size="13.5" fill="#1e293b" text-anchor="middle">
+    <text x="465" y="534">strict schema, no free text</text>
+    <text x="465" y="558">current stock and date only</text>
+    <text x="465" y="582">main limitation required</text>
+    <text x="465" y="604">when data is unconfirmed</text>
+  </g>
+
+  <rect x="640" y="472" width="250" height="150" rx="14" fill="#e0e7ff" stroke="#1f3a5f" stroke-width="2"/>
+  <text x="765" y="504" font-size="16.5" font-weight="700" fill="#1f3a5f" text-anchor="middle">Renderer</text>
+  <g font-size="13.5" fill="#1e293b" text-anchor="middle">
+    <text x="765" y="534">readable.py thresholds:</text>
+    <text x="765" y="558">"almost all" only at ≥ 90%,</text>
+    <text x="765" y="582">"well ahead of" at ≥ 10 points</text>
+    <text x="765" y="604">Max 250 words</text>
+  </g>
+
+  <rect x="940" y="472" width="230" height="150" rx="14" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="1055" y="504" font-size="16.5" font-weight="700" fill="#0f172a" text-anchor="middle">Report</text>
+  <g font-size="13.5" fill="#334155" text-anchor="middle">
+    <text x="1055" y="534">In brief</text>
+    <text x="1055" y="558">Key findings</text>
+    <text x="1055" y="582">How it traded · disclosures</text>
+    <text x="1055" y="604">Evidence limits</text>
+  </g>
+
+  <g stroke="#475569" stroke-width="2" fill="none">
+    <path d="M290 547 L338 547" marker-end="url(#a)"/>
+    <path d="M590 547 L638 547" marker-end="url(#a)"/>
+    <path d="M890 547 L938 547" marker-end="url(#a)"/>
+  </g>
+  <path d="M465 622 L465 664 L165 664 L165 624" stroke="#b45309" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <text x="315" y="684" font-size="13" fill="#b45309" text-anchor="middle">reject + correct format: the agent retries</text>
+
+  <rect x="660" y="652" width="16" height="16" rx="4" fill="#ccfbf1" stroke="#0f766e"/>
+  <text x="684" y="665" font-size="13" fill="#334155">decided by the model</text>
+  <rect x="850" y="652" width="16" height="16" rx="4" fill="#e0e7ff" stroke="#1f3a5f"/>
+  <text x="874" y="665" font-size="13" fill="#334155">enforced by code</text>
+</svg>

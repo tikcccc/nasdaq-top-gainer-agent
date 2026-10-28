@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <title>Agent flow: the model chooses tools, code verifies facts and controls the email</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b45309"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="700" rx="18" fill="#ffffff"/>
+
+  <text x="40" y="52" font-size="28" font-weight="700" fill="#0f172a">Agent flow</text>
+  <text x="200" y="50" font-size="15" fill="#64748b">LangGraph StateGraph · nasdaq_agent/agent/graph.py</text>
+
+  <!-- LLM agent -->
+  <rect x="40" y="250" width="210" height="120" rx="16" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+  <text x="145" y="295" font-size="20" font-weight="700" fill="#0f766e" text-anchor="middle">LLM agent</text>
+  <text x="145" y="322" font-size="14" fill="#115e59" text-anchor="middle">chooses tools</text>
+  <text x="145" y="342" font-size="14" fill="#115e59" text-anchor="middle">and arguments</text>
+
+  <!-- Tools group -->
+  <rect x="340" y="110" width="300" height="470" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="490" y="142" font-size="17" font-weight="700" fill="#0f172a" text-anchor="middle">Tools</text>
+  <text x="490" y="162" font-size="12.5" fill="#64748b" text-anchor="middle">nasdaq_agent/tools/</text>
+  <g font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle">
+    <rect x="365" y="178" width="250" height="44" rx="10" fill="#ffffff" stroke="#94a3b8"/><text x="490" y="205" fill="#0f172a">record_plan</text>
+    <rect x="365" y="232" width="250" height="44" rx="10" fill="#ffffff" stroke="#94a3b8"/><text x="490" y="259" fill="#0f172a">get_top_nasdaq_gainers</text>
+    <rect x="365" y="286" width="250" height="44" rx="10" fill="#ffffff" stroke="#94a3b8"/><text x="490" y="313" fill="#0f172a">get_price_history</text>
+    <rect x="365" y="340" width="250" height="44" rx="10" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/><text x="490" y="367" fill="#0f172a">execute_python</text>
+    <rect x="365" y="394" width="250" height="44" rx="10" fill="#ffffff" stroke="#94a3b8"/><text x="490" y="421" fill="#0f172a">get_news</text>
+    <rect x="365" y="448" width="250" height="44" rx="10" fill="#ffffff" stroke="#94a3b8"/><text x="490" y="475" fill="#0f172a">analyze_sentiment</text>
+    <rect x="365" y="502" width="250" height="44" rx="10" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/><text x="490" y="529" fill="#0f172a">send_email</text>
+  </g>
+
+  <!-- agent <-> tools -->
+  <path d="M250 290 L338 290" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="294" y="280" font-size="13" fill="#334155" text-anchor="middle">tool calls</text>
+  <path d="M338 335 L252 335" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="294" y="356" font-size="13" fill="#334155" text-anchor="middle">verified facts</text>
+
+  <!-- Docker sandbox -->
+  <rect x="720" y="300" width="270" height="124" rx="14" fill="#e0e7ff" stroke="#1f3a5f" stroke-width="2"/>
+  <text x="855" y="334" font-size="18" font-weight="700" fill="#1f3a5f" text-anchor="middle">Docker sandbox</text>
+  <text x="855" y="359" font-size="13.5" fill="#1e293b" text-anchor="middle">no network · read-only · non-root</text>
+  <text x="855" y="380" font-size="13.5" fill="#1e293b" text-anchor="middle">CPU, memory, process, time limits</text>
+  <text x="855" y="404" font-size="13.5" fill="#1e293b" text-anchor="middle">results recomputed independently</text>
+  <path d="M615 362 L718 362" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="667" y="352" font-size="12.5" fill="#334155" text-anchor="middle">model code</text>
+
+  <!-- Pre-send guard -->
+  <polygon points="855,470 955,524 855,578 755,524" fill="#e0e7ff" stroke="#1f3a5f" stroke-width="2"/>
+  <text x="855" y="520" font-size="15" font-weight="700" fill="#1f3a5f" text-anchor="middle">Pre-send</text>
+  <text x="855" y="539" font-size="15" font-weight="700" fill="#1f3a5f" text-anchor="middle">guard</text>
+  <path d="M615 524 L753 524" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="684" y="514" font-size="12.5" fill="#334155" text-anchor="middle">evidence IDs</text>
+  <text x="684" y="545" font-size="12.5" fill="#334155" text-anchor="middle">+ key findings</text>
+
+  <!-- Email sent -->
+  <rect x="1030" y="494" width="140" height="60" rx="14" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+  <text x="1100" y="530" font-size="16" font-weight="700" fill="#15803d" text-anchor="middle">Email sent</text>
+  <path d="M955 524 L1028 524" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="991" y="514" font-size="13" fill="#15803d" text-anchor="middle">pass</text>
+
+  <!-- reject back to agent -->
+  <path d="M855 578 L855 615 L145 615 L145 372" stroke="#b45309" stroke-width="2" fill="none" stroke-dasharray="0" marker-end="url(#arrow-red)"/>
+  <text x="500" y="636" font-size="13" fill="#b45309" text-anchor="middle">reject + reason: the agent corrects its selection</text>
+
+  <!-- Deterministic fallback -->
+  <rect x="720" y="120" width="270" height="110" rx="14" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="855" y="154" font-size="18" font-weight="700" fill="#92400e" text-anchor="middle">Deterministic fallback</text>
+  <text x="855" y="179" font-size="13.5" fill="#1e293b" text-anchor="middle">reference calculation from</text>
+  <text x="855" y="198" font-size="13.5" fill="#1e293b" text-anchor="middle">validated data, sends a</text>
+  <text x="855" y="217" font-size="13.5" fill="#1e293b" text-anchor="middle">report marked degraded</text>
+  <path d="M145 250 L145 96 L855 96 L855 118" stroke="#b45309" stroke-width="2" fill="none" stroke-dasharray="7 6" marker-end="url(#arrow-red)"/>
+  <text x="500" y="88" font-size="13" fill="#92400e" text-anchor="middle">deadline · turn or budget limit · model outage · no sandbox · repeated rejection</text>
+  <rect x="1030" y="145" width="140" height="60" rx="14" fill="#fff7ed" stroke="#b45309" stroke-width="2"/>
+  <text x="1100" y="181" font-size="15" font-weight="700" fill="#92400e" text-anchor="middle">Degraded report</text>
+  <path d="M990 175 L1028 175" stroke="#b45309" stroke-width="2" fill="none" marker-end="url(#arrow-red)"/>
+
+  <!-- legend -->
+  <rect x="1012" y="610" width="16" height="16" rx="4" fill="#ccfbf1" stroke="#0f766e"/>
+  <text x="1036" y="623" font-size="13" fill="#334155">decided by the model</text>
+  <rect x="1012" y="640" width="16" height="16" rx="4" fill="#e0e7ff" stroke="#1f3a5f"/>
+  <text x="1036" y="653" font-size="13" fill="#334155">enforced by code</text>
+</svg>

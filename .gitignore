@@ -1,0 +1,25 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+outputs/
+.pytest_cache/
+.cache/
+web/node_modules/
+web/.next/
+web/next-env.d.ts
+.claude/
+*.sqlite
+
+# Assignment brief (not part of the submission)
+AI Engineer Take-Home Assignment.pdf
+
+# Local research notes (never publish)
+/research/
+/reserch/
+
+# Generated evaluation results, logs, freezes and historical archives
+/docs/evaluation/
+
+.ruff_cache/
+web/tsconfig.tsbuildinfo

@@ -1,0 +1,17 @@
+.git
+.env
+.env.*
+.venv
+**/__pycache__
+**/*.pyc
+.pytest_cache
+.ruff_cache
+outputs
+research
+reserch
+docs/evaluation
+**/node_modules
+**/.next
+**/*.tsbuildinfo
+*.pdf
+.claude

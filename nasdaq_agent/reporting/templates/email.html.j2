@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="report-renderer" content="{{ renderer.version }}:{{ renderer.fingerprint }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>{{ subject }}</title>
+<style>
+  /* Progressive enhancement: clients that support CSS animation (Apple Mail, iOS, browsers) get motion;
+     others (Gmail, Outlook) ignore this block and show the identical static layout from inline styles. */
+  /* Start states stay readable: a renderer that freezes on the first frame (thumbnails, print,
+     background tabs) must never show an empty email. */
+  @keyframes fx-fade-up { from { opacity: .5; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  @keyframes fx-grow { from { transform: scaleX(.1); } to { transform: scaleX(1); } }
+  @keyframes fx-pulse { 0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, .55); } 70% { box-shadow: 0 0 0 7px rgba(74, 222, 128, 0); } 100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); } }
+  @keyframes fx-sheen { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
+  .fx-in { animation: fx-fade-up .7s cubic-bezier(.2, .8, .2, 1) both; }
+  .fx-d1 { animation-delay: .08s; } .fx-d2 { animation-delay: .16s; } .fx-d3 { animation-delay: .24s; }
+  .fx-d4 { animation-delay: .32s; } .fx-d5 { animation-delay: .40s; } .fx-d6 { animation-delay: .48s; }
+  .fx-bar { transform-origin: left center; animation: fx-grow 1s cubic-bezier(.2, .8, .2, 1) both; }
+  .fx-dot { animation: fx-pulse 2.2s ease-out infinite; }
+  .fx-hero { background-size: 200% 200% !important; animation: fx-sheen 12s ease-in-out infinite alternate; }
+  .fx-card { transition: transform .2s ease, box-shadow .2s ease; }
+  .fx-card:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(15, 23, 42, .08); }
+  .fx-link:hover { text-decoration: underline !important; }
+  .day-row:hover td { background: #f1f5f9; }
+  .day-row:hover .fx-bar { opacity: 1 !important; }
+  /* Show the animated SVG only where it survived (Apple Mail, iOS, browsers). Gmail and Outlook strip
+     <svg>, so :has(svg) cannot match there and the static PNG stays visible. */
+  .chart-wrap:has(.chart-svg svg) .chart-svg { display: block !important; max-height: none !important; }
+  .chart-wrap:has(.chart-svg svg) .chart-png { display: none !important; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+  @media only screen and (max-width: 600px) {
+    .wrap { padding-left: 18px !important; padding-right: 18px !important; }
+    .kpi { width: 47% !important; }
+    .hero-symbol { font-size: 30px !important; }
+    .col-bench { display: none !important; }
+  }
+</style>
+</head>
+<body style="margin:0;padding:0;background:#eef2f7;-webkit-text-size-adjust:100%;">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:#eef2f7;">{{ preheader }}&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#eef2f7;">
+<tr><td align="center" style="padding:24px 10px;">
+<table role="presentation" width="640" cellpadding="0" cellspacing="0" style="width:100%;max-width:640px;background:#ffffff;border-radius:14px;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:{{ colors.ink }};box-shadow:0 1px 3px rgba(15,23,42,.06);">
+
+  {# ---------- Hero ---------- #}
+  <tr><td class="wrap fx-hero" style="padding:26px 30px 24px;background:#0f172a;background-image:linear-gradient(120deg,#0f172a 0%,#1e293b 45%,#0b3b2e 100%);color:#ffffff;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+      <td style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#94a3b8;">
+        <span class="fx-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#4ade80;margin-right:7px;vertical-align:1px;"></span>{{ ctx.selection_label }} · {{ trade_date_long }}
+      </td>
+    </tr></table>
+    <div class="fx-in" style="margin-top:12px;">
+      <span class="hero-symbol" style="font-size:38px;font-weight:800;letter-spacing:-.02em;">{{ ctx.symbol }}</span>
+      <span style="display:inline-block;margin-left:10px;padding:4px 12px;border-radius:999px;background:rgba(74,222,128,.16);color:#4ade80;font-size:22px;font-weight:700;vertical-align:6px;">{{ ctx.pct_change }}</span>
+    </div>
+    <div class="fx-in fx-d1" style="margin-top:6px;font-size:14px;color:#cbd5e1;">
+      {{ ctx.company }}<span style="color:#475569;"> &nbsp;|&nbsp; </span>{% if is_intraday %}Last{% else %}Close{% endif %} {{ ctx.price }}<span style="color:#475569;"> &nbsp;|&nbsp; </span>Vol {{ ctx.volume }}{% if ctx.market_cap != 'n/a' %}<span style="color:#475569;"> &nbsp;|&nbsp; </span>Screener mkt cap {{ ctx.market_cap }}{% endif %}
+    </div>
+  </td></tr>
+
+  {% if summary %}<tr><td class="wrap" style="padding:18px 30px 0;font-size:15px;line-height:1.65;color:#334155;">{{ summary.html | safe }}</td></tr>{% endif %}
+
+  {# ---------- KPI strip ---------- #}
+  <tr><td class="wrap" style="padding:22px 24px 6px;">
+    {% for k in kpis %}<div class="kpi fx-in fx-card fx-d{{ loop.index }}" style="display:inline-block;width:{% if kpis|length == 4 %}47{% else %}30.5{% endif %}%;min-width:150px;margin:0 1% 10px;padding:12px 12px 11px;box-sizing:border-box;border:1px solid #e2e8f0;border-radius:10px;background:#f8fafc;vertical-align:top;">
+      <div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:{{ colors.muted }};">{{ k.label }}</div>
+      <div style="margin-top:4px;font-size:20px;font-weight:700;color:{{ k.color }};font-variant-numeric:tabular-nums;white-space:nowrap;">{{ k.value }}</div>
+    </div>{% endfor %}
+  </td></tr>
+
+  {# ---------- Narrative ---------- #}
+  <tr><td class="wrap fx-in fx-d3" style="padding:10px 30px 4px;font-size:15px;line-height:1.65;color:#334155;">
+    {% for b in narrative %}<p style="margin:0 0 12px;">{{ b.html | safe }}</p>{% endfor %}
+  </td></tr>
+
+  {# ---------- Chart ---------- #}
+  {% if chart %}
+  <tr><td class="wrap fx-in fx-d4" style="padding:10px 24px 4px;">
+    <div style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:{{ colors.muted }};margin:0 6px 8px;">{{ ctx.days }} trading days vs the market</div>
+    <div class="chart-wrap" style="border:1px solid #e2e8f0;border-radius:10px;overflow:hidden;">
+      {% if svg %}<div class="chart-svg" style="display:none;max-height:0;overflow:hidden;mso-hide:all;padding:6px 4px 0;">{{ svg | safe }}</div>{% endif %}
+      <img class="chart-png" src="cid:chart" width="592" alt="{{ ctx.symbol }} vs S&amp;P 500 and NASDAQ Composite, indexed to 100" style="display:block;width:100%;max-width:592px;height:auto;">
+    </div>
+  </td></tr>
+  {% endif %}
+
+  {# ---------- Daily moves ---------- #}
+  {% if rows %}
+  <tr><td class="wrap fx-in fx-d5" style="padding:16px 30px 6px;">
+    <div style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:{{ colors.muted }};margin-bottom:6px;">Daily moves</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:13px;font-variant-numeric:tabular-nums;">
+      <tr style="font-size:11px;color:#94a3b8;">
+        <td style="padding:0 0 4px;">Date</td><td style="padding:0 10px 4px;text-align:right;">Close</td><td></td>
+        <td style="padding:0 0 4px;text-align:right;">{{ ctx.symbol }}</td>
+        <td class="col-bench" style="padding:0 0 4px 12px;text-align:right;">S&amp;P 500</td>
+        <td class="col-bench" style="padding:0 0 4px 12px;text-align:right;">NASDAQ</td>
+      </tr>
+      {% for r in rows %}
+      <tr class="day-row" title="{{ r.title }}" style="border-top:1px solid #f1f5f9;">
+        <td style="padding:8px 0;color:{{ colors.muted }};white-space:nowrap;width:86px;">{{ r.date }}</td>
+        <td style="padding:8px 10px;text-align:right;white-space:nowrap;width:70px;color:#334155;">{{ r.close }}</td>
+        <td style="padding:8px 6px;">
+          <div class="fx-bar" style="height:8px;width:{{ r.bar }}%;background:{{ r.color }};border-radius:6px;opacity:.85;animation-delay:{{ r.delay }};"></div>
+        </td>
+        <td style="padding:8px 0;text-align:right;white-space:nowrap;width:70px;font-weight:600;color:{{ r.color }};">{{ r.change }}</td>
+        <td class="col-bench" style="padding:8px 0 8px 12px;text-align:right;white-space:nowrap;width:58px;color:{{ colors.muted }};">{{ r.spx }}</td>
+        <td class="col-bench" style="padding:8px 0 8px 12px;text-align:right;white-space:nowrap;width:58px;color:{{ colors.muted }};">{{ r.ndx }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </td></tr>
+  {% endif %}
+
+  {# ---------- News & sentiment ---------- #}
+  {% if sentiment or news %}
+  <tr><td class="wrap fx-in fx-d6" style="padding:18px 30px 6px;">
+    <div style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:{{ colors.muted }};margin-bottom:8px;">News &amp; sentiment</div>
+    {% if sentiment %}
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:10px;"><tr>
+      <td style="font-size:14px;color:#334155;">
+        <span style="color:{{ colors.muted }};">Headline sentiment estimate: </span><b style="color:{{ sentiment.color }};">{{ sentiment.label }}</b> &nbsp;<span style="color:{{ colors.muted }};">{{ sentiment.score }}/4 · {{ sentiment.confidence }} confidence</span>
+        <div style="margin-top:6px;height:6px;background:#e2e8f0;border-radius:6px;overflow:hidden;"><div class="fx-bar" style="height:6px;width:{{ sentiment.meter }}%;background:{{ sentiment.color }};border-radius:6px;animation-delay:.6s;"></div></div>
+        <div style="margin-top:8px;font-size:13px;color:{{ colors.muted }};">Model assessment of fetched headlines; it does not establish price causation or investor motives.{% if sentiment.uncertain %} &nbsp;<span style="color:#b45309;">low confidence</span>{% endif %}</div>
+      </td>
+    </tr></table>
+    {% endif %}
+    {% for n in news %}
+    <div class="fx-card" style="padding:10px 12px;margin-bottom:8px;border:1px solid #e2e8f0;border-radius:10px;">
+      <div style="font-size:11px;color:{{ colors.muted }};">{% if n.ref %}{{ cite(n.ref) | safe }} · {% endif %}{{ n.publisher }}{% if n.when %} · {{ n.when }}{% endif %}</div>
+      <div style="margin-top:3px;font-size:14px;line-height:1.4;">{% if n.link %}<a class="fx-link" href="{{ n.link }}" style="color:{{ colors.ink }};text-decoration:none;font-weight:600;">{{ n.title }}</a>{% else %}<span style="font-weight:600;">{{ n.title }}</span>{% endif %}</div>
+    </div>
+    {% endfor %}
+  </td></tr>
+  {% endif %}
+
+  {# ---------- Stock-specific risks and method note: deliberately low-key ---------- #}
+  {% if risks or method %}
+  <tr><td class="wrap" style="padding:16px 30px 0;font-size:12px;line-height:1.6;color:#64748b;">
+    {% if risks %}<div style="margin-bottom:6px;"><span style="color:#475569;font-weight:600;">Risks to watch:</span>
+      {% for r in risks %}{{ r | safe }}{% if not loop.last %} &nbsp;·&nbsp; {% endif %}{% endfor %}</div>{% endif %}
+    {% if method %}<div style="font-weight:700;color:#475569;margin-bottom:4px;">Method</div>{% endif %}
+    {% for line in method %}<div>{{ line | safe }}</div>{% endfor %}
+  </td></tr>
+  {% endif %}
+
+  {# ---------- Footer ---------- #}
+  {% if sources %}
+  <tr><td class="wrap" style="padding:18px 30px 26px;">
+    <div style="border-top:1px solid #e2e8f0;padding-top:12px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:{{ colors.muted }};margin-bottom:6px;">Sources</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:12px;line-height:1.5;color:#475569;">
+      {% for r in sources %}
+      <tr>
+        <td style="vertical-align:top;width:26px;padding:2px 0;color:#2563eb;font-weight:600;">[{{ r.number }}]</td>
+        <td style="padding:2px 0;">{{ r.publisher }}. {% if r.url %}<a href="{{ r.url }}" style="color:#334155;text-decoration:underline;text-decoration-color:#cbd5e1;">{{ r.title }}</a>{% else %}{{ r.title }}{% endif %}{% if r.date %}, {{ r.date }}{% endif %}.</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </td></tr>
+  {% endif %}
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>

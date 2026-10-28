@@ -1,0 +1,1062 @@
+{
+  "version": 1,
+  "kind": "synthetic",
+  "limitations": "Authored synthetic fixtures, not historical market observations. Held-out dates and symbols are disjoint; some regime templates are shared. Contract scores are not model generalization scores.",
+  "cases": [
+    {
+      "id": "market_00",
+      "split": "calibration",
+      "symbol": "Q000",
+      "penny_symbol": "P000",
+      "trade_date": "2026-07-06",
+      "regime": "up",
+      "closes": [
+        2.0,
+        2.02,
+        2.04,
+        2.06,
+        2.08,
+        2.4
+      ],
+      "event": "earnings",
+      "news": [
+        "Example Q000 reports higher quarterly earnings"
+      ],
+      "gold": {
+        "filtered_symbol": "Q000",
+        "unfiltered_common_symbol": "P000",
+        "cumulative_return": 0.2,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_01",
+      "split": "calibration",
+      "symbol": "Q001",
+      "penny_symbol": "P001",
+      "trade_date": "2026-07-06",
+      "regime": "down",
+      "closes": [
+        2.0,
+        1.8,
+        1.6,
+        1.4,
+        1.2,
+        1.32
+      ],
+      "event": "financing",
+      "news": [
+        "Example Q001 announces a dilutive share offering"
+      ],
+      "gold": {
+        "filtered_symbol": "Q001",
+        "unfiltered_common_symbol": "P001",
+        "cumulative_return": -0.34,
+        "trend": "down",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_02",
+      "split": "calibration",
+      "symbol": "Q002",
+      "penny_symbol": "P002",
+      "trade_date": "2026-07-06",
+      "regime": "sideways",
+      "closes": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        1.98,
+        2.0
+      ],
+      "event": "sector_macro",
+      "news": [
+        "Example Q002 provides a routine business update"
+      ],
+      "gold": {
+        "filtered_symbol": "Q002",
+        "unfiltered_common_symbol": "P002",
+        "cumulative_return": 0,
+        "trend": "sideways",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_03",
+      "split": "calibration",
+      "symbol": "Q003",
+      "penny_symbol": "P003",
+      "trade_date": "2026-07-06",
+      "regime": "volatile",
+      "closes": [
+        2.0,
+        2.2,
+        1.98,
+        2.178,
+        1.9602,
+        2.15622
+      ],
+      "event": "regulatory_clinical",
+      "news": [
+        "Example Q003 announces a positive clinical trial result"
+      ],
+      "gold": {
+        "filtered_symbol": "Q003",
+        "unfiltered_common_symbol": "P003",
+        "cumulative_return": 0.07811,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_04",
+      "split": "calibration",
+      "symbol": "Q004",
+      "penny_symbol": "P004",
+      "trade_date": "2026-07-06",
+      "regime": "single_jump",
+      "closes": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        4.0
+      ],
+      "event": "deal",
+      "news": [
+        "Example Q004 announces a new customer contract"
+      ],
+      "gold": {
+        "filtered_symbol": "Q004",
+        "unfiltered_common_symbol": "P004",
+        "cumulative_return": 1,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_05",
+      "split": "calibration",
+      "symbol": "Q005",
+      "penny_symbol": "P005",
+      "trade_date": "2026-07-06",
+      "regime": "ipo",
+      "closes": [
+        2.0,
+        1.9,
+        2.2
+      ],
+      "event": "speculation",
+      "news": [
+        "Example Q005 begins trading following its initial public offering"
+      ],
+      "gold": {
+        "filtered_symbol": "Q005",
+        "unfiltered_common_symbol": "P005",
+        "cumulative_return": null,
+        "trend": null,
+        "full_window_available": false
+      }
+    },
+    {
+      "id": "market_06",
+      "split": "calibration",
+      "symbol": "Q006",
+      "penny_symbol": "P006",
+      "trade_date": "2026-07-06",
+      "regime": "stale_primary",
+      "closes": [
+        2.0,
+        2.02,
+        2.04,
+        2.06,
+        2.08,
+        2.4
+      ],
+      "event": "corporate_action",
+      "news": [
+        "Example Q006 declares a special cash dividend"
+      ],
+      "gold": {
+        "filtered_symbol": "Q006",
+        "unfiltered_common_symbol": "P006",
+        "cumulative_return": 0.2,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_07",
+      "split": "calibration",
+      "symbol": "Q007",
+      "penny_symbol": "P007",
+      "trade_date": "2026-07-06",
+      "regime": "no_news",
+      "closes": [
+        2.0,
+        2.02,
+        2.04,
+        2.06,
+        2.08,
+        2.4
+      ],
+      "event": null,
+      "news": [],
+      "gold": {
+        "filtered_symbol": "Q007",
+        "unfiltered_common_symbol": "P007",
+        "cumulative_return": 0.2,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_08",
+      "split": "calibration",
+      "symbol": "Q008",
+      "penny_symbol": "P008",
+      "trade_date": "2026-07-07",
+      "regime": "up",
+      "closes": [
+        50.0,
+        50.5,
+        51.0,
+        51.5,
+        52.0,
+        60.0
+      ],
+      "event": "earnings",
+      "news": [
+        "Example Q008 reports higher quarterly earnings"
+      ],
+      "gold": {
+        "filtered_symbol": "Q008",
+        "unfiltered_common_symbol": "P008",
+        "cumulative_return": 0.2,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_09",
+      "split": "calibration",
+      "symbol": "Q009",
+      "penny_symbol": "P009",
+      "trade_date": "2026-07-07",
+      "regime": "down",
+      "closes": [
+        50.0,
+        45.0,
+        40.0,
+        35.0,
+        30.0,
+        33.0
+      ],
+      "event": "financing",
+      "news": [
+        "Example Q009 announces a dilutive share offering"
+      ],
+      "gold": {
+        "filtered_symbol": "Q009",
+        "unfiltered_common_symbol": "P009",
+        "cumulative_return": -0.34,
+        "trend": "down",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_10",
+      "split": "calibration",
+      "symbol": "Q010",
+      "penny_symbol": "P010",
+      "trade_date": "2026-07-07",
+      "regime": "sideways",
+      "closes": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        49.5,
+        50.0
+      ],
+      "event": "sector_macro",
+      "news": [
+        "Example Q010 provides a routine business update"
+      ],
+      "gold": {
+        "filtered_symbol": "Q010",
+        "unfiltered_common_symbol": "P010",
+        "cumulative_return": 0,
+        "trend": "sideways",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_11",
+      "split": "calibration",
+      "symbol": "Q011",
+      "penny_symbol": "P011",
+      "trade_date": "2026-07-07",
+      "regime": "volatile",
+      "closes": [
+        50.0,
+        55.0,
+        49.5,
+        54.45,
+        49.005,
+        53.9055
+      ],
+      "event": "regulatory_clinical",
+      "news": [
+        "Example Q011 announces a positive clinical trial result"
+      ],
+      "gold": {
+        "filtered_symbol": "Q011",
+        "unfiltered_common_symbol": "P011",
+        "cumulative_return": 0.07811,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_12",
+      "split": "calibration",
+      "symbol": "Q012",
+      "penny_symbol": "P012",
+      "trade_date": "2026-07-07",
+      "regime": "single_jump",
+      "closes": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        100.0
+      ],
+      "event": "deal",
+      "news": [
+        "Example Q012 announces a new customer contract"
+      ],
+      "gold": {
+        "filtered_symbol": "Q012",
+        "unfiltered_common_symbol": "P012",
+        "cumulative_return": 1,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_13",
+      "split": "calibration",
+      "symbol": "Q013",
+      "penny_symbol": "P013",
+      "trade_date": "2026-07-07",
+      "regime": "ipo",
+      "closes": [
+        50.0,
+        47.5,
+        55.0
+      ],
+      "event": "speculation",
+      "news": [
+        "Example Q013 begins trading following its initial public offering"
+      ],
+      "gold": {
+        "filtered_symbol": "Q013",
+        "unfiltered_common_symbol": "P013",
+        "cumulative_return": null,
+        "trend": null,
+        "full_window_available": false
+      }
+    },
+    {
+      "id": "market_14",
+      "split": "calibration",
+      "symbol": "Q014",
+      "penny_symbol": "P014",
+      "trade_date": "2026-07-07",
+      "regime": "stale_primary",
+      "closes": [
+        50.0,
+        50.5,
+        51.0,
+        51.5,
+        52.0,
+        60.0
+      ],
+      "event": "corporate_action",
+      "news": [
+        "Example Q014 declares a special cash dividend"
+      ],
+      "gold": {
+        "filtered_symbol": "Q014",
+        "unfiltered_common_symbol": "P014",
+        "cumulative_return": 0.2,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_15",
+      "split": "calibration",
+      "symbol": "Q015",
+      "penny_symbol": "P015",
+      "trade_date": "2026-07-07",
+      "regime": "no_news",
+      "closes": [
+        50.0,
+        50.5,
+        51.0,
+        51.5,
+        52.0,
+        60.0
+      ],
+      "event": null,
+      "news": [],
+      "gold": {
+        "filtered_symbol": "Q015",
+        "unfiltered_common_symbol": "P015",
+        "cumulative_return": 0.2,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_16",
+      "split": "test",
+      "symbol": "Q016",
+      "penny_symbol": "P016",
+      "trade_date": "2026-09-14",
+      "regime": "up",
+      "closes": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        120
+      ],
+      "event": "earnings",
+      "news": [
+        "Example Q016 reports higher quarterly earnings"
+      ],
+      "gold": {
+        "filtered_symbol": "Q016",
+        "unfiltered_common_symbol": "P016",
+        "cumulative_return": 0.2,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_17",
+      "split": "test",
+      "symbol": "Q017",
+      "penny_symbol": "P017",
+      "trade_date": "2026-09-14",
+      "regime": "down",
+      "closes": [
+        100,
+        90,
+        80,
+        70,
+        60,
+        66
+      ],
+      "event": "financing",
+      "news": [
+        "Example Q017 announces a dilutive share offering"
+      ],
+      "gold": {
+        "filtered_symbol": "Q017",
+        "unfiltered_common_symbol": "P017",
+        "cumulative_return": -0.34,
+        "trend": "down",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_18",
+      "split": "test",
+      "symbol": "Q018",
+      "penny_symbol": "P018",
+      "trade_date": "2026-09-14",
+      "regime": "sideways",
+      "closes": [
+        100,
+        100,
+        100,
+        100,
+        99,
+        100
+      ],
+      "event": "sector_macro",
+      "news": [
+        "Example Q018 provides a routine business update"
+      ],
+      "gold": {
+        "filtered_symbol": "Q018",
+        "unfiltered_common_symbol": "P018",
+        "cumulative_return": 0,
+        "trend": "sideways",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_19",
+      "split": "test",
+      "symbol": "Q019",
+      "penny_symbol": "P019",
+      "trade_date": "2026-09-14",
+      "regime": "volatile",
+      "closes": [
+        100,
+        110,
+        99,
+        108.9,
+        98.01,
+        107.811
+      ],
+      "event": "regulatory_clinical",
+      "news": [
+        "Example Q019 announces a positive clinical trial result"
+      ],
+      "gold": {
+        "filtered_symbol": "Q019",
+        "unfiltered_common_symbol": "P019",
+        "cumulative_return": 0.07811,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_20",
+      "split": "test",
+      "symbol": "Q020",
+      "penny_symbol": "P020",
+      "trade_date": "2026-09-14",
+      "regime": "single_jump",
+      "closes": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        200
+      ],
+      "event": "deal",
+      "news": [
+        "Example Q020 announces a new customer contract"
+      ],
+      "gold": {
+        "filtered_symbol": "Q020",
+        "unfiltered_common_symbol": "P020",
+        "cumulative_return": 1,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_21",
+      "split": "test",
+      "symbol": "Q021",
+      "penny_symbol": "P021",
+      "trade_date": "2026-09-14",
+      "regime": "ipo",
+      "closes": [
+        100,
+        95,
+        110
+      ],
+      "event": "speculation",
+      "news": [
+        "Example Q021 begins trading following its initial public offering"
+      ],
+      "gold": {
+        "filtered_symbol": "Q021",
+        "unfiltered_common_symbol": "P021",
+        "cumulative_return": null,
+        "trend": null,
+        "full_window_available": false
+      }
+    },
+    {
+      "id": "market_22",
+      "split": "test",
+      "symbol": "Q022",
+      "penny_symbol": "P022",
+      "trade_date": "2026-09-14",
+      "regime": "stale_primary",
+      "closes": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        120
+      ],
+      "event": "corporate_action",
+      "news": [
+        "Example Q022 declares a special cash dividend"
+      ],
+      "gold": {
+        "filtered_symbol": "Q022",
+        "unfiltered_common_symbol": "P022",
+        "cumulative_return": 0.2,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_23",
+      "split": "test",
+      "symbol": "Q023",
+      "penny_symbol": "P023",
+      "trade_date": "2026-09-14",
+      "regime": "no_news",
+      "closes": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        120
+      ],
+      "event": null,
+      "news": [],
+      "gold": {
+        "filtered_symbol": "Q023",
+        "unfiltered_common_symbol": "P023",
+        "cumulative_return": 0.2,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_24",
+      "split": "test",
+      "symbol": "Q024",
+      "penny_symbol": "P024",
+      "trade_date": "2026-09-15",
+      "regime": "up",
+      "closes": [
+        200,
+        202,
+        204,
+        206,
+        208,
+        240
+      ],
+      "event": "earnings",
+      "news": [
+        "Example Q024 reports higher quarterly earnings"
+      ],
+      "gold": {
+        "filtered_symbol": "Q024",
+        "unfiltered_common_symbol": "P024",
+        "cumulative_return": 0.2,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_25",
+      "split": "test",
+      "symbol": "Q025",
+      "penny_symbol": "P025",
+      "trade_date": "2026-09-15",
+      "regime": "down",
+      "closes": [
+        200,
+        180,
+        160,
+        140,
+        120,
+        132
+      ],
+      "event": "financing",
+      "news": [
+        "Example Q025 announces a dilutive share offering"
+      ],
+      "gold": {
+        "filtered_symbol": "Q025",
+        "unfiltered_common_symbol": "P025",
+        "cumulative_return": -0.34,
+        "trend": "down",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_26",
+      "split": "test",
+      "symbol": "Q026",
+      "penny_symbol": "P026",
+      "trade_date": "2026-09-15",
+      "regime": "sideways",
+      "closes": [
+        200,
+        200,
+        200,
+        200,
+        198,
+        200
+      ],
+      "event": "sector_macro",
+      "news": [
+        "Example Q026 provides a routine business update"
+      ],
+      "gold": {
+        "filtered_symbol": "Q026",
+        "unfiltered_common_symbol": "P026",
+        "cumulative_return": 0,
+        "trend": "sideways",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_27",
+      "split": "test",
+      "symbol": "Q027",
+      "penny_symbol": "P027",
+      "trade_date": "2026-09-15",
+      "regime": "volatile",
+      "closes": [
+        200,
+        220,
+        198,
+        217.8,
+        196.02,
+        215.622
+      ],
+      "event": "regulatory_clinical",
+      "news": [
+        "Example Q027 announces a positive clinical trial result"
+      ],
+      "gold": {
+        "filtered_symbol": "Q027",
+        "unfiltered_common_symbol": "P027",
+        "cumulative_return": 0.07811,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_28",
+      "split": "test",
+      "symbol": "Q028",
+      "penny_symbol": "P028",
+      "trade_date": "2026-09-15",
+      "regime": "single_jump",
+      "closes": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        400
+      ],
+      "event": "deal",
+      "news": [
+        "Example Q028 announces a new customer contract"
+      ],
+      "gold": {
+        "filtered_symbol": "Q028",
+        "unfiltered_common_symbol": "P028",
+        "cumulative_return": 1,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_29",
+      "split": "test",
+      "symbol": "Q029",
+      "penny_symbol": "P029",
+      "trade_date": "2026-09-15",
+      "regime": "ipo",
+      "closes": [
+        200,
+        190,
+        220
+      ],
+      "event": "speculation",
+      "news": [
+        "Example Q029 begins trading following its initial public offering"
+      ],
+      "gold": {
+        "filtered_symbol": "Q029",
+        "unfiltered_common_symbol": "P029",
+        "cumulative_return": null,
+        "trend": null,
+        "full_window_available": false
+      }
+    },
+    {
+      "id": "market_30",
+      "split": "test",
+      "symbol": "Q030",
+      "penny_symbol": "P030",
+      "trade_date": "2026-09-15",
+      "regime": "stale_primary",
+      "closes": [
+        200,
+        202,
+        204,
+        206,
+        208,
+        240
+      ],
+      "event": "corporate_action",
+      "news": [
+        "Example Q030 declares a special cash dividend"
+      ],
+      "gold": {
+        "filtered_symbol": "Q030",
+        "unfiltered_common_symbol": "P030",
+        "cumulative_return": 0.2,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_31",
+      "split": "test",
+      "symbol": "Q031",
+      "penny_symbol": "P031",
+      "trade_date": "2026-09-15",
+      "regime": "no_news",
+      "closes": [
+        200,
+        202,
+        204,
+        206,
+        208,
+        240
+      ],
+      "event": null,
+      "news": [],
+      "gold": {
+        "filtered_symbol": "Q031",
+        "unfiltered_common_symbol": "P031",
+        "cumulative_return": 0.2,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_32",
+      "split": "test",
+      "symbol": "Q032",
+      "penny_symbol": "P032",
+      "trade_date": "2026-09-16",
+      "regime": "up",
+      "closes": [
+        1000,
+        1010,
+        1020,
+        1030,
+        1040,
+        1200
+      ],
+      "event": "earnings",
+      "news": [
+        "Example Q032 reports higher quarterly earnings"
+      ],
+      "gold": {
+        "filtered_symbol": "Q032",
+        "unfiltered_common_symbol": "P032",
+        "cumulative_return": 0.2,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_33",
+      "split": "test",
+      "symbol": "Q033",
+      "penny_symbol": "P033",
+      "trade_date": "2026-09-16",
+      "regime": "down",
+      "closes": [
+        1000,
+        900,
+        800,
+        700,
+        600,
+        660
+      ],
+      "event": "financing",
+      "news": [
+        "Example Q033 announces a dilutive share offering"
+      ],
+      "gold": {
+        "filtered_symbol": "Q033",
+        "unfiltered_common_symbol": "P033",
+        "cumulative_return": -0.34,
+        "trend": "down",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_34",
+      "split": "test",
+      "symbol": "Q034",
+      "penny_symbol": "P034",
+      "trade_date": "2026-09-16",
+      "regime": "sideways",
+      "closes": [
+        1000,
+        1000,
+        1000,
+        1000,
+        990,
+        1000
+      ],
+      "event": "sector_macro",
+      "news": [
+        "Example Q034 provides a routine business update"
+      ],
+      "gold": {
+        "filtered_symbol": "Q034",
+        "unfiltered_common_symbol": "P034",
+        "cumulative_return": 0,
+        "trend": "sideways",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_35",
+      "split": "test",
+      "symbol": "Q035",
+      "penny_symbol": "P035",
+      "trade_date": "2026-09-16",
+      "regime": "volatile",
+      "closes": [
+        1000,
+        1100,
+        990,
+        1089.0,
+        980.1,
+        1078.11
+      ],
+      "event": "regulatory_clinical",
+      "news": [
+        "Example Q035 announces a positive clinical trial result"
+      ],
+      "gold": {
+        "filtered_symbol": "Q035",
+        "unfiltered_common_symbol": "P035",
+        "cumulative_return": 0.07811,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_36",
+      "split": "test",
+      "symbol": "Q036",
+      "penny_symbol": "P036",
+      "trade_date": "2026-09-16",
+      "regime": "single_jump",
+      "closes": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        2000
+      ],
+      "event": "deal",
+      "news": [
+        "Example Q036 announces a new customer contract"
+      ],
+      "gold": {
+        "filtered_symbol": "Q036",
+        "unfiltered_common_symbol": "P036",
+        "cumulative_return": 1,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_37",
+      "split": "test",
+      "symbol": "Q037",
+      "penny_symbol": "P037",
+      "trade_date": "2026-09-16",
+      "regime": "ipo",
+      "closes": [
+        1000,
+        950,
+        1100
+      ],
+      "event": "speculation",
+      "news": [
+        "Example Q037 begins trading following its initial public offering"
+      ],
+      "gold": {
+        "filtered_symbol": "Q037",
+        "unfiltered_common_symbol": "P037",
+        "cumulative_return": null,
+        "trend": null,
+        "full_window_available": false
+      }
+    },
+    {
+      "id": "market_38",
+      "split": "test",
+      "symbol": "Q038",
+      "penny_symbol": "P038",
+      "trade_date": "2026-09-16",
+      "regime": "stale_primary",
+      "closes": [
+        1000,
+        1010,
+        1020,
+        1030,
+        1040,
+        1200
+      ],
+      "event": "corporate_action",
+      "news": [
+        "Example Q038 declares a special cash dividend"
+      ],
+      "gold": {
+        "filtered_symbol": "Q038",
+        "unfiltered_common_symbol": "P038",
+        "cumulative_return": 0.2,
+        "trend": "up",
+        "full_window_available": true
+      }
+    },
+    {
+      "id": "market_39",
+      "split": "test",
+      "symbol": "Q039",
+      "penny_symbol": "P039",
+      "trade_date": "2026-09-16",
+      "regime": "no_news",
+      "closes": [
+        1000,
+        1010,
+        1020,
+        1030,
+        1040,
+        1200
+      ],
+      "event": null,
+      "news": [],
+      "gold": {
+        "filtered_symbol": "Q039",
+        "unfiltered_common_symbol": "P039",
+        "cumulative_return": 0.2,
+        "trend": "up",
+        "full_window_available": true
+      }
+    }
+  ]
+}

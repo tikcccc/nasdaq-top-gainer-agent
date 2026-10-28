@@ -1,0 +1,637 @@
+{
+  "version": 1,
+  "kind": "authored_synthetic",
+  "limitations": "Small authored semantic-check fixtures. Contexts are disjoint between calibration and test, but error templates are shared. Not a natural-distribution or independently human-adjudicated benchmark.",
+  "cases": [
+    {
+      "id": "earnings_supported",
+      "split": "calibration",
+      "context_id": "earnings",
+      "category": "supported",
+      "label": "pass",
+      "text": "Example EARN reported higher quarterly revenue.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "Example EARN reported higher quarterly revenue."
+        }
+      }
+    },
+    {
+      "id": "earnings_direction",
+      "split": "calibration",
+      "context_id": "earnings",
+      "category": "direction",
+      "label": "reject",
+      "text": "The stock followed a clear downtrend over the analysis window.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "Example EARN reported higher quarterly revenue."
+        }
+      }
+    },
+    {
+      "id": "earnings_invented_event",
+      "split": "calibration",
+      "context_id": "earnings",
+      "category": "invented_event",
+      "label": "reject",
+      "text": "The company announced an acquisition of its largest competitor.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "Example EARN reported higher quarterly revenue."
+        }
+      }
+    },
+    {
+      "id": "earnings_causality",
+      "split": "calibration",
+      "context_id": "earnings",
+      "category": "causality",
+      "label": "reject",
+      "text": "The price move was driven by short sellers covering their positions.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "Example EARN reported higher quarterly revenue."
+        }
+      }
+    },
+    {
+      "id": "earnings_advice",
+      "split": "calibration",
+      "context_id": "earnings",
+      "category": "advice",
+      "label": "reject",
+      "text": "You should buy the stock now before the rally continues.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "Example EARN reported higher quarterly revenue."
+        }
+      }
+    },
+    {
+      "id": "clinical_supported",
+      "split": "calibration",
+      "context_id": "clinical",
+      "category": "supported",
+      "label": "pass",
+      "text": "Example CLIN announced a positive trial result.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "Example CLIN announced a positive trial result."
+        }
+      }
+    },
+    {
+      "id": "clinical_direction",
+      "split": "calibration",
+      "context_id": "clinical",
+      "category": "direction",
+      "label": "reject",
+      "text": "The stock followed a clear downtrend over the analysis window.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "Example CLIN announced a positive trial result."
+        }
+      }
+    },
+    {
+      "id": "clinical_invented_event",
+      "split": "calibration",
+      "context_id": "clinical",
+      "category": "invented_event",
+      "label": "reject",
+      "text": "The company announced an acquisition of its largest competitor.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "Example CLIN announced a positive trial result."
+        }
+      }
+    },
+    {
+      "id": "clinical_causality",
+      "split": "calibration",
+      "context_id": "clinical",
+      "category": "causality",
+      "label": "reject",
+      "text": "The price move was driven by short sellers covering their positions.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "Example CLIN announced a positive trial result."
+        }
+      }
+    },
+    {
+      "id": "clinical_advice",
+      "split": "calibration",
+      "context_id": "clinical",
+      "category": "advice",
+      "label": "reject",
+      "text": "You should buy the stock now before the rally continues.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "Example CLIN announced a positive trial result."
+        }
+      }
+    },
+    {
+      "id": "contract_supported",
+      "split": "calibration",
+      "context_id": "contract",
+      "category": "supported",
+      "label": "pass",
+      "text": "Example CONT announced a new customer contract.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down"
+        },
+        "headlines": {
+          "n1": "Example CONT announced a new customer contract."
+        }
+      }
+    },
+    {
+      "id": "contract_direction",
+      "split": "calibration",
+      "context_id": "contract",
+      "category": "direction",
+      "label": "reject",
+      "text": "The stock followed a clear uptrend over the analysis window.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down"
+        },
+        "headlines": {
+          "n1": "Example CONT announced a new customer contract."
+        }
+      }
+    },
+    {
+      "id": "contract_invented_event",
+      "split": "calibration",
+      "context_id": "contract",
+      "category": "invented_event",
+      "label": "reject",
+      "text": "The company announced an acquisition of its largest competitor.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down"
+        },
+        "headlines": {
+          "n1": "Example CONT announced a new customer contract."
+        }
+      }
+    },
+    {
+      "id": "contract_causality",
+      "split": "calibration",
+      "context_id": "contract",
+      "category": "causality",
+      "label": "reject",
+      "text": "The price move was driven by short sellers covering their positions.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down"
+        },
+        "headlines": {
+          "n1": "Example CONT announced a new customer contract."
+        }
+      }
+    },
+    {
+      "id": "contract_advice",
+      "split": "calibration",
+      "context_id": "contract",
+      "category": "advice",
+      "label": "reject",
+      "text": "You should buy the stock now before the rally continues.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down"
+        },
+        "headlines": {
+          "n1": "Example CONT announced a new customer contract."
+        }
+      }
+    },
+    {
+      "id": "financing_supported",
+      "split": "test",
+      "context_id": "financing",
+      "category": "supported",
+      "label": "pass",
+      "text": "Example FUND announced a share offering.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down"
+        },
+        "headlines": {
+          "n1": "Example FUND announced a share offering."
+        }
+      }
+    },
+    {
+      "id": "financing_direction",
+      "split": "test",
+      "context_id": "financing",
+      "category": "direction",
+      "label": "reject",
+      "text": "The stock followed a clear uptrend over the analysis window.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down"
+        },
+        "headlines": {
+          "n1": "Example FUND announced a share offering."
+        }
+      }
+    },
+    {
+      "id": "financing_invented_event",
+      "split": "test",
+      "context_id": "financing",
+      "category": "invented_event",
+      "label": "reject",
+      "text": "The company announced an acquisition of its largest competitor.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down"
+        },
+        "headlines": {
+          "n1": "Example FUND announced a share offering."
+        }
+      }
+    },
+    {
+      "id": "financing_causality",
+      "split": "test",
+      "context_id": "financing",
+      "category": "causality",
+      "label": "reject",
+      "text": "The price move was driven by short sellers covering their positions.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down"
+        },
+        "headlines": {
+          "n1": "Example FUND announced a share offering."
+        }
+      }
+    },
+    {
+      "id": "financing_advice",
+      "split": "test",
+      "context_id": "financing",
+      "category": "advice",
+      "label": "reject",
+      "text": "You should buy the stock now before the rally continues.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down"
+        },
+        "headlines": {
+          "n1": "Example FUND announced a share offering."
+        }
+      }
+    },
+    {
+      "id": "dividend_supported",
+      "split": "test",
+      "context_id": "dividend",
+      "category": "supported",
+      "label": "pass",
+      "text": "Example DIVD declared a special cash dividend.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "Example DIVD declared a special cash dividend."
+        }
+      }
+    },
+    {
+      "id": "dividend_direction",
+      "split": "test",
+      "context_id": "dividend",
+      "category": "direction",
+      "label": "reject",
+      "text": "The stock followed a clear downtrend over the analysis window.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "Example DIVD declared a special cash dividend."
+        }
+      }
+    },
+    {
+      "id": "dividend_invented_event",
+      "split": "test",
+      "context_id": "dividend",
+      "category": "invented_event",
+      "label": "reject",
+      "text": "The company announced an acquisition of its largest competitor.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "Example DIVD declared a special cash dividend."
+        }
+      }
+    },
+    {
+      "id": "dividend_causality",
+      "split": "test",
+      "context_id": "dividend",
+      "category": "causality",
+      "label": "reject",
+      "text": "The price move was driven by short sellers covering their positions.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "Example DIVD declared a special cash dividend."
+        }
+      }
+    },
+    {
+      "id": "dividend_advice",
+      "split": "test",
+      "context_id": "dividend",
+      "category": "advice",
+      "label": "reject",
+      "text": "You should buy the stock now before the rally continues.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "Example DIVD declared a special cash dividend."
+        }
+      }
+    },
+    {
+      "id": "buyback_supported",
+      "split": "test",
+      "context_id": "buyback",
+      "category": "supported",
+      "label": "pass",
+      "text": "Example BACK announced a share repurchase program.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "sideways"
+        },
+        "headlines": {
+          "n1": "Example BACK announced a share repurchase program."
+        }
+      }
+    },
+    {
+      "id": "buyback_direction",
+      "split": "test",
+      "context_id": "buyback",
+      "category": "direction",
+      "label": "reject",
+      "text": "The stock followed a clear downtrend over the analysis window.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "sideways"
+        },
+        "headlines": {
+          "n1": "Example BACK announced a share repurchase program."
+        }
+      }
+    },
+    {
+      "id": "buyback_invented_event",
+      "split": "test",
+      "context_id": "buyback",
+      "category": "invented_event",
+      "label": "reject",
+      "text": "The company announced an acquisition of its largest competitor.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "sideways"
+        },
+        "headlines": {
+          "n1": "Example BACK announced a share repurchase program."
+        }
+      }
+    },
+    {
+      "id": "buyback_causality",
+      "split": "test",
+      "context_id": "buyback",
+      "category": "causality",
+      "label": "reject",
+      "text": "The price move was driven by short sellers covering their positions.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "sideways"
+        },
+        "headlines": {
+          "n1": "Example BACK announced a share repurchase program."
+        }
+      }
+    },
+    {
+      "id": "buyback_advice",
+      "split": "test",
+      "context_id": "buyback",
+      "category": "advice",
+      "label": "reject",
+      "text": "You should buy the stock now before the rally continues.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "sideways"
+        },
+        "headlines": {
+          "n1": "Example BACK announced a share repurchase program."
+        }
+      }
+    },
+    {
+      "id": "management_supported",
+      "split": "test",
+      "context_id": "management",
+      "category": "supported",
+      "label": "pass",
+      "text": "Example MGMT appointed a new chief executive.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down"
+        },
+        "headlines": {
+          "n1": "Example MGMT appointed a new chief executive."
+        }
+      }
+    },
+    {
+      "id": "management_direction",
+      "split": "test",
+      "context_id": "management",
+      "category": "direction",
+      "label": "reject",
+      "text": "The stock followed a clear uptrend over the analysis window.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down"
+        },
+        "headlines": {
+          "n1": "Example MGMT appointed a new chief executive."
+        }
+      }
+    },
+    {
+      "id": "management_invented_event",
+      "split": "test",
+      "context_id": "management",
+      "category": "invented_event",
+      "label": "reject",
+      "text": "The company announced an acquisition of its largest competitor.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down"
+        },
+        "headlines": {
+          "n1": "Example MGMT appointed a new chief executive."
+        }
+      }
+    },
+    {
+      "id": "management_causality",
+      "split": "test",
+      "context_id": "management",
+      "category": "causality",
+      "label": "reject",
+      "text": "The price move was driven by short sellers covering their positions.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down"
+        },
+        "headlines": {
+          "n1": "Example MGMT appointed a new chief executive."
+        }
+      }
+    },
+    {
+      "id": "management_advice",
+      "split": "test",
+      "context_id": "management",
+      "category": "advice",
+      "label": "reject",
+      "text": "You should buy the stock now before the rally continues.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down"
+        },
+        "headlines": {
+          "n1": "Example MGMT appointed a new chief executive."
+        }
+      }
+    },
+    {
+      "id": "no_news_supported",
+      "split": "test",
+      "context_id": "no_news",
+      "category": "supported",
+      "label": "pass",
+      "text": "No relevant company headlines were found.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {}
+      }
+    },
+    {
+      "id": "no_news_direction",
+      "split": "test",
+      "context_id": "no_news",
+      "category": "direction",
+      "label": "reject",
+      "text": "The stock followed a clear downtrend over the analysis window.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {}
+      }
+    },
+    {
+      "id": "no_news_invented_event",
+      "split": "test",
+      "context_id": "no_news",
+      "category": "invented_event",
+      "label": "reject",
+      "text": "The company announced an acquisition of its largest competitor.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {}
+      }
+    },
+    {
+      "id": "no_news_causality",
+      "split": "test",
+      "context_id": "no_news",
+      "category": "causality",
+      "label": "reject",
+      "text": "The price move was driven by short sellers covering their positions.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {}
+      }
+    },
+    {
+      "id": "no_news_advice",
+      "split": "test",
+      "context_id": "no_news",
+      "category": "advice",
+      "label": "reject",
+      "text": "You should buy the stock now before the rally continues.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {}
+      }
+    }
+  ]
+}

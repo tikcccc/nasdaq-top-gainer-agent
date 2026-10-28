@@ -1,0 +1,1371 @@
+{
+  "version": 3,
+  "kind": "authored_report_fragments",
+  "limitations": "Created after v2 semantic and partial live-flow failures. Calibration uses three contexts, test uses eight different event families; authored and visible to the developer, not external blind or independently human-adjudicated. Short report fragments test semantic layers, not full structural email validation. Old sets are now regression sets, not fresh holdouts.",
+  "cases": [
+    {
+      "id": "cal_reporting_pass_0",
+      "context_id": "cal_reporting",
+      "split": "calibration",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "NOVA returned +4.00% over the window. A fetched issuer headline dated October 1 reports quarterly earnings. The positive sentiment reading is a model estimate, not proof of causality.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "CAL_REPORTING",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "NOVA reported quarterly earnings.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "cal_reporting_pass_1",
+      "context_id": "cal_reporting",
+      "split": "calibration",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "The available headline establishes an earnings release but does not establish why shares rose.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "CAL_REPORTING",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "NOVA reported quarterly earnings.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "cal_reporting_reject_0",
+      "context_id": "cal_reporting",
+      "split": "calibration",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "NOVA opened a new production facility.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "CAL_REPORTING",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "NOVA reported quarterly earnings.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "cal_reporting_reject_1",
+      "context_id": "cal_reporting",
+      "split": "calibration",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "The earnings release is the only company news in circulation.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "CAL_REPORTING",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "NOVA reported quarterly earnings.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "cal_estimates_pass_0",
+      "context_id": "cal_estimates",
+      "split": "calibration",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "A product trial appears in the returned news. The model estimates positive sentiment at 80% confidence.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "CAL_ESTIMATES",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "VISTA announced a new product trial.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "cal_estimates_pass_1",
+      "context_id": "cal_estimates",
+      "split": "calibration",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "The trial announcement and price increase coincide; this does not establish that the trial caused the return.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "CAL_ESTIMATES",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "VISTA announced a new product trial.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "cal_estimates_reject_0",
+      "context_id": "cal_estimates",
+      "split": "calibration",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "The trial caused institutional funds to buy the stock.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "CAL_ESTIMATES",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "VISTA announced a new product trial.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "cal_estimates_reject_1",
+      "context_id": "cal_estimates",
+      "split": "calibration",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "VISTA completed a commercial launch.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "CAL_ESTIMATES",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "VISTA announced a new product trial.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "cal_conditional_pass_0",
+      "context_id": "cal_conditional",
+      "split": "calibration",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "MEADOW scheduled a vote on its proposed merger. If shareholders reject the proposal, completion could be delayed.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "CAL_CONDITIONAL",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "MEADOW scheduled a shareholder vote on a proposed merger.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "cal_conditional_pass_1",
+      "context_id": "cal_conditional",
+      "split": "calibration",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "The merger remains proposed in the supplied evidence.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "CAL_CONDITIONAL",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "MEADOW scheduled a shareholder vote on a proposed merger.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "cal_conditional_reject_0",
+      "context_id": "cal_conditional",
+      "split": "calibration",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "MEADOW completed the merger.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "CAL_CONDITIONAL",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "MEADOW scheduled a shareholder vote on a proposed merger.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "cal_conditional_reject_1",
+      "context_id": "cal_conditional",
+      "split": "calibration",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "A regulator blocked the proposed merger.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "CAL_CONDITIONAL",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "MEADOW scheduled a shareholder vote on a proposed merger.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "cyber_incident_pass_0",
+      "context_id": "cyber_incident",
+      "split": "test",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "RIVER disclosed a network incident whose financial impact remains unknown.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "CYBER_INCIDENT",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "RIVER disclosed a network incident; investigation is ongoing and financial impact is unknown.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "cyber_incident_pass_1",
+      "context_id": "cyber_incident",
+      "split": "test",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "The supplied headline reports an ongoing investigation. It does not quantify a loss or establish the cause of the share move.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "CYBER_INCIDENT",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "RIVER disclosed a network incident; investigation is ongoing and financial impact is unknown.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "cyber_incident_reject_0",
+      "context_id": "cyber_incident",
+      "split": "test",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "RIVER confirmed that customer passwords were stolen.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "CYBER_INCIDENT",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "RIVER disclosed a network incident; investigation is ongoing and financial impact is unknown.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "cyber_incident_reject_1",
+      "context_id": "cyber_incident",
+      "split": "test",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "The company paid a ransom to restore its network.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "CYBER_INCIDENT",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "RIVER disclosed a network incident; investigation is ongoing and financial impact is unknown.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "export_license_pass_0",
+      "context_id": "export_license",
+      "split": "test",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "ASTRA received a license covering two named customers.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "EXPORT_LICENSE",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "ASTRA received an export license limited to two named customers.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "export_license_pass_1",
+      "context_id": "export_license",
+      "split": "test",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "The license is customer-specific in the fetched headline. Broader export permission is not established.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "EXPORT_LICENSE",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "ASTRA received an export license limited to two named customers.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "export_license_reject_0",
+      "context_id": "export_license",
+      "split": "test",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "ASTRA received unrestricted permission to export to every customer.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "EXPORT_LICENSE",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "ASTRA received an export license limited to two named customers.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "export_license_reject_1",
+      "context_id": "export_license",
+      "split": "test",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "The export license caused a short squeeze.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "EXPORT_LICENSE",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "ASTRA received an export license limited to two named customers.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "guidance_range_pass_0",
+      "context_id": "guidance_range",
+      "split": "test",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "BRIAR kept its revenue guidance while lowering its margin forecast.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "GUIDANCE_RANGE",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "BRIAR retained its annual revenue guidance and lowered its margin forecast.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "guidance_range_pass_1",
+      "context_id": "guidance_range",
+      "split": "test",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "Revenue guidance was unchanged in the fetched release. This alone does not establish why the stock rose.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "GUIDANCE_RANGE",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "BRIAR retained its annual revenue guidance and lowered its margin forecast.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "guidance_range_reject_0",
+      "context_id": "guidance_range",
+      "split": "test",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "BRIAR raised its annual revenue forecast.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "GUIDANCE_RANGE",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "BRIAR retained its annual revenue guidance and lowered its margin forecast.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "guidance_range_reject_1",
+      "context_id": "guidance_range",
+      "split": "test",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "The company announced a cash dividend.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "GUIDANCE_RANGE",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "BRIAR retained its annual revenue guidance and lowered its margin forecast.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "labor_talks_pass_0",
+      "context_id": "labor_talks",
+      "split": "test",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "WILLOW resumed wage negotiations without reaching an agreement.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "LABOR_TALKS",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "WILLOW restarted wage negotiations; no agreement has been reached.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "labor_talks_pass_1",
+      "context_id": "labor_talks",
+      "split": "test",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "If negotiations fail, uncertainty could persist. The headline does not establish the outcome.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "LABOR_TALKS",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "WILLOW restarted wage negotiations; no agreement has been reached.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "labor_talks_reject_0",
+      "context_id": "labor_talks",
+      "split": "test",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "WILLOW signed a wage agreement.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "LABOR_TALKS",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "WILLOW restarted wage negotiations; no agreement has been reached.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "labor_talks_reject_1",
+      "context_id": "labor_talks",
+      "split": "test",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "Workers at WILLOW began a strike.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "LABOR_TALKS",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "WILLOW restarted wage negotiations; no agreement has been reached.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "asset_bid_pass_0",
+      "context_id": "asset_bid",
+      "split": "test",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "STONE made a non-binding warehouse bid that has not been accepted.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "ASSET_BID",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "STONE submitted a non-binding bid for a warehouse; the seller has not accepted it.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "asset_bid_pass_1",
+      "context_id": "asset_bid",
+      "split": "test",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "The bid is an announced proposal rather than a completed asset purchase.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "ASSET_BID",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "STONE submitted a non-binding bid for a warehouse; the seller has not accepted it.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "asset_bid_reject_0",
+      "context_id": "asset_bid",
+      "split": "test",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "STONE acquired the warehouse.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "ASSET_BID",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "STONE submitted a non-binding bid for a warehouse; the seller has not accepted it.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "asset_bid_reject_1",
+      "context_id": "asset_bid",
+      "split": "test",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "The warehouse purchase was financed by a new share issue.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "ASSET_BID",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "STONE submitted a non-binding bid for a warehouse; the seller has not accepted it.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "audit_review_pass_0",
+      "context_id": "audit_review",
+      "split": "test",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "COVE appointed an auditor for an internal-controls review.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "AUDIT_REVIEW",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "COVE appointed an independent auditor to review internal controls; no findings have been released.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "audit_review_pass_1",
+      "context_id": "audit_review",
+      "split": "test",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "The review has no released findings in the supplied headline, so its outcome remains unknown.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "AUDIT_REVIEW",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "COVE appointed an independent auditor to review internal controls; no findings have been released.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "audit_review_reject_0",
+      "context_id": "audit_review",
+      "split": "test",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "The auditor found accounting fraud at COVE.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "AUDIT_REVIEW",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "COVE appointed an independent auditor to review internal controls; no findings have been released.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "audit_review_reject_1",
+      "context_id": "audit_review",
+      "split": "test",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "COVE restated its financial statements.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "AUDIT_REVIEW",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "COVE appointed an independent auditor to review internal controls; no findings have been released.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "pricing_license_pass_0",
+      "context_id": "pricing_license",
+      "split": "test",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "FOX renewed a customer software license without disclosing financial terms.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "PRICING_LICENSE",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "FOX renewed its software license with a customer; financial terms were not disclosed.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "pricing_license_pass_1",
+      "context_id": "pricing_license",
+      "split": "test",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "The fetched renewal headline is dated October 1. The positive sentiment assessment remains a model estimate.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "PRICING_LICENSE",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "FOX renewed its software license with a customer; financial terms were not disclosed.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "pricing_license_reject_0",
+      "context_id": "pricing_license",
+      "split": "test",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "The renewal doubled the customer fee.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "PRICING_LICENSE",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "FOX renewed its software license with a customer; financial terms were not disclosed.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "pricing_license_reject_1",
+      "context_id": "pricing_license",
+      "split": "test",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "FOX received the highest analyst rating in its sector.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "PRICING_LICENSE",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "FOX renewed its software license with a customer; financial terms were not disclosed.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "metrics_news_scope_pass_0",
+      "context_id": "metrics_news_scope",
+      "split": "test",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "ELM returned +4.00% over the window with an upward trend. A routine operating update is present among fetched headlines.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "METRICS_NEWS_SCOPE",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "ELM published a routine operating update.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "metrics_news_scope_pass_1",
+      "context_id": "metrics_news_scope",
+      "split": "test",
+      "label": "pass",
+      "category": "report_fragment",
+      "text": "The positive model sentiment reading does not prove that the update caused the stock return.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "METRICS_NEWS_SCOPE",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "ELM published a routine operating update.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "metrics_news_scope_reject_0",
+      "context_id": "metrics_news_scope",
+      "split": "test",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "ELM had a clear downward trend over the analysis window.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "METRICS_NEWS_SCOPE",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "ELM published a routine operating update.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    },
+    {
+      "id": "metrics_news_scope_reject_1",
+      "context_id": "metrics_news_scope",
+      "split": "test",
+      "label": "reject",
+      "category": "report_fragment",
+      "text": "The operating update is the only news published about ELM anywhere.",
+      "evidence": {
+        "metrics_and_context": {
+          "symbol": "METRICS_NEWS_SCOPE",
+          "trade_date": "Thu, Oct 1, 2026",
+          "metrics.trend": "up",
+          "metrics.cumulative_return": "+4.00%",
+          "sentiment.label": "positive",
+          "sentiment.confidence": "80%"
+        },
+        "headlines": {
+          "n1": {
+            "title": "ELM published a routine operating update.",
+            "published": "2026-10-01T14:00:00+00:00",
+            "publisher": "Issuer release"
+          }
+        },
+        "news_coverage": "Fetched subset, not exhaustive coverage of all events",
+        "sentiment_assessment": {
+          "label": "positive",
+          "confidence": 0.8,
+          "interpretation": "Model estimate, not observed cause"
+        }
+      }
+    }
+  ]
+}

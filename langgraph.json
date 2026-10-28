@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "nasdaq_agent": "./nasdaq_agent/agent/studio.py:graph"
+  },
+  "env": ".env"
+}

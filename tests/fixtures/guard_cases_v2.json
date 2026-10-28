@@ -1,0 +1,767 @@
+{
+  "version": 2,
+  "kind": "authored_synthetic",
+  "limitations": "Authored after inspecting v1 failures. Disjoint calibration/test event contexts and distinct event families, but authored by the developer, not externally blind or independently human-adjudicated. Four examples per context, with paired positive/negative wording. Test partition is not used to tune thresholds.",
+  "cases": [
+    {
+      "id": "cal_license_positive_0",
+      "context_id": "cal_license",
+      "split": "calibration",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "LYRA entered a non-exclusive software licensing agreement.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "LYRA signed a non-exclusive license for its imaging software."
+        }
+      }
+    },
+    {
+      "id": "cal_license_positive_1",
+      "context_id": "cal_license",
+      "split": "calibration",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "The license announcement alone does not establish why the share price moved.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "LYRA signed a non-exclusive license for its imaging software."
+        }
+      }
+    },
+    {
+      "id": "cal_license_negative_0",
+      "context_id": "cal_license",
+      "split": "calibration",
+      "category": "absent_event",
+      "label": "reject",
+      "text": "LYRA received approval to sell a cancer drug.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "LYRA signed a non-exclusive license for its imaging software."
+        }
+      }
+    },
+    {
+      "id": "cal_license_negative_1",
+      "context_id": "cal_license",
+      "split": "calibration",
+      "category": "scope_or_cause",
+      "label": "reject",
+      "text": "LYRA signed an exclusive license covering all imaging software.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "LYRA signed a non-exclusive license for its imaging software."
+        }
+      }
+    },
+    {
+      "id": "cal_debt_positive_0",
+      "context_id": "cal_debt",
+      "split": "calibration",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "ORBIT plans a refinancing that has not closed.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "ORBIT plans to refinance debt; no financing has closed."
+        }
+      }
+    },
+    {
+      "id": "cal_debt_positive_1",
+      "context_id": "cal_debt",
+      "split": "calibration",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "If the proposed refinancing fails, financing uncertainty could remain.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "ORBIT plans to refinance debt; no financing has closed."
+        }
+      }
+    },
+    {
+      "id": "cal_debt_negative_0",
+      "context_id": "cal_debt",
+      "split": "calibration",
+      "category": "absent_event",
+      "label": "reject",
+      "text": "ORBIT completed its refinancing.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "ORBIT plans to refinance debt; no financing has closed."
+        }
+      }
+    },
+    {
+      "id": "cal_debt_negative_1",
+      "context_id": "cal_debt",
+      "split": "calibration",
+      "category": "scope_or_cause",
+      "label": "reject",
+      "text": "The refinancing caused short sellers to cover their positions.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "ORBIT plans to refinance debt; no financing has closed."
+        }
+      }
+    },
+    {
+      "id": "cal_outage_positive_0",
+      "context_id": "cal_outage",
+      "split": "calibration",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "No headlines are available in the supplied evidence.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {}
+      }
+    },
+    {
+      "id": "cal_outage_positive_1",
+      "context_id": "cal_outage",
+      "split": "calibration",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "Limited news coverage prevents a firm attribution of the price move.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {}
+      }
+    },
+    {
+      "id": "cal_outage_negative_0",
+      "context_id": "cal_outage",
+      "split": "calibration",
+      "category": "absent_event",
+      "label": "reject",
+      "text": "The company is reportedly opening a factory.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {}
+      }
+    },
+    {
+      "id": "cal_outage_negative_1",
+      "context_id": "cal_outage",
+      "split": "calibration",
+      "category": "scope_or_cause",
+      "label": "reject",
+      "text": "A large institutional investor probably purchased shares today.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {}
+      }
+    },
+    {
+      "id": "cal_prices_positive_0",
+      "context_id": "cal_prices",
+      "split": "calibration",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "CEDAR retained its finance chief.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "CEDAR retained its chief financial officer."
+        }
+      }
+    },
+    {
+      "id": "cal_prices_positive_1",
+      "context_id": "cal_prices",
+      "split": "calibration",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "The analysis window had an upward trend.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "CEDAR retained its chief financial officer."
+        }
+      }
+    },
+    {
+      "id": "cal_prices_negative_0",
+      "context_id": "cal_prices",
+      "split": "calibration",
+      "category": "absent_event",
+      "label": "reject",
+      "text": "CEDAR dismissed its chief financial officer.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "CEDAR retained its chief financial officer."
+        }
+      }
+    },
+    {
+      "id": "cal_prices_negative_1",
+      "context_id": "cal_prices",
+      "split": "calibration",
+      "category": "scope_or_cause",
+      "label": "reject",
+      "text": "The stock followed a downward trend.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "CEDAR retained its chief financial officer."
+        }
+      }
+    },
+    {
+      "id": "product_recall_positive_0",
+      "context_id": "product_recall",
+      "split": "test",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "MAPLE recalled a single batch of model Z batteries.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "MAPLE voluntarily recalled one batch of model Z batteries; no injuries were reported."
+        }
+      }
+    },
+    {
+      "id": "product_recall_positive_1",
+      "context_id": "product_recall",
+      "split": "test",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "No injuries were reported in the supplied headline.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "MAPLE voluntarily recalled one batch of model Z batteries; no injuries were reported."
+        }
+      }
+    },
+    {
+      "id": "product_recall_negative_0",
+      "context_id": "product_recall",
+      "split": "test",
+      "category": "absent_event",
+      "label": "reject",
+      "text": "MAPLE recalled every battery model it makes.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "MAPLE voluntarily recalled one batch of model Z batteries; no injuries were reported."
+        }
+      }
+    },
+    {
+      "id": "product_recall_negative_1",
+      "context_id": "product_recall",
+      "split": "test",
+      "category": "scope_or_cause",
+      "label": "reject",
+      "text": "The company settled a product-liability lawsuit.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "MAPLE voluntarily recalled one batch of model Z batteries; no injuries were reported."
+        }
+      }
+    },
+    {
+      "id": "patent_positive_0",
+      "context_id": "patent",
+      "split": "test",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "ALTO applied for a patent on a cooling process.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "ALTO filed a patent application for a cooling process; review is pending."
+        }
+      }
+    },
+    {
+      "id": "patent_positive_1",
+      "context_id": "patent",
+      "split": "test",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "Patent review remains pending, so a grant is uncertain.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "ALTO filed a patent application for a cooling process; review is pending."
+        }
+      }
+    },
+    {
+      "id": "patent_negative_0",
+      "context_id": "patent",
+      "split": "test",
+      "category": "absent_event",
+      "label": "reject",
+      "text": "ALTO was granted a patent for its cooling process.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "ALTO filed a patent application for a cooling process; review is pending."
+        }
+      }
+    },
+    {
+      "id": "patent_negative_1",
+      "context_id": "patent",
+      "split": "test",
+      "category": "scope_or_cause",
+      "label": "reject",
+      "text": "Customers have already placed orders for the patented technology.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "ALTO filed a patent application for a cooling process; review is pending."
+        }
+      }
+    },
+    {
+      "id": "distribution_positive_0",
+      "context_id": "distribution",
+      "split": "test",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "VERDE reached a distribution agreement covering Canada.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "VERDE signed a two-year distribution agreement in Canada."
+        }
+      }
+    },
+    {
+      "id": "distribution_positive_1",
+      "context_id": "distribution",
+      "split": "test",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "A distribution agreement does not itself demonstrate recognized revenue.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "VERDE signed a two-year distribution agreement in Canada."
+        }
+      }
+    },
+    {
+      "id": "distribution_negative_0",
+      "context_id": "distribution",
+      "split": "test",
+      "category": "absent_event",
+      "label": "reject",
+      "text": "VERDE signed a global manufacturing agreement.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "VERDE signed a two-year distribution agreement in Canada."
+        }
+      }
+    },
+    {
+      "id": "distribution_negative_1",
+      "context_id": "distribution",
+      "split": "test",
+      "category": "scope_or_cause",
+      "label": "reject",
+      "text": "The Canadian agreement immediately doubled recognized revenue.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "VERDE signed a two-year distribution agreement in Canada."
+        }
+      }
+    },
+    {
+      "id": "rating_positive_0",
+      "context_id": "rating",
+      "split": "test",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "HARBOR debt is under review, with its rating unchanged.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "A credit agency placed HARBOR debt on review; its rating is unchanged."
+        }
+      }
+    },
+    {
+      "id": "rating_positive_1",
+      "context_id": "rating",
+      "split": "test",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "If the review leads to a downgrade, financing conditions could change.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "A credit agency placed HARBOR debt on review; its rating is unchanged."
+        }
+      }
+    },
+    {
+      "id": "rating_negative_0",
+      "context_id": "rating",
+      "split": "test",
+      "category": "absent_event",
+      "label": "reject",
+      "text": "HARBOR debt was downgraded today.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "A credit agency placed HARBOR debt on review; its rating is unchanged."
+        }
+      }
+    },
+    {
+      "id": "rating_negative_1",
+      "context_id": "rating",
+      "split": "test",
+      "category": "scope_or_cause",
+      "label": "reject",
+      "text": "HARBOR received an equity buy recommendation from the credit agency.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "A credit agency placed HARBOR debt on review; its rating is unchanged."
+        }
+      }
+    },
+    {
+      "id": "litigation_positive_0",
+      "context_id": "litigation",
+      "split": "test",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "A hearing in the PINE case is scheduled for next month.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "A court scheduled a hearing in PINE litigation for next month; no verdict has been issued."
+        }
+      }
+    },
+    {
+      "id": "litigation_positive_1",
+      "context_id": "litigation",
+      "split": "test",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "The evidence contains no verdict, so the case outcome remains unresolved.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "A court scheduled a hearing in PINE litigation for next month; no verdict has been issued."
+        }
+      }
+    },
+    {
+      "id": "litigation_negative_0",
+      "context_id": "litigation",
+      "split": "test",
+      "category": "absent_event",
+      "label": "reject",
+      "text": "PINE won its court case.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "A court scheduled a hearing in PINE litigation for next month; no verdict has been issued."
+        }
+      }
+    },
+    {
+      "id": "litigation_negative_1",
+      "context_id": "litigation",
+      "split": "test",
+      "category": "scope_or_cause",
+      "label": "reject",
+      "text": "The court ordered PINE to pay damages.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "A court scheduled a hearing in PINE litigation for next month; no verdict has been issued."
+        }
+      }
+    },
+    {
+      "id": "capacity_positive_0",
+      "context_id": "capacity",
+      "split": "test",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "DELTA approved a plant project that has not entered construction.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "DELTA approved plans for a new plant; construction has not started."
+        }
+      }
+    },
+    {
+      "id": "capacity_positive_1",
+      "context_id": "capacity",
+      "split": "test",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "A future construction delay could postpone the planned expansion.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "DELTA approved plans for a new plant; construction has not started."
+        }
+      }
+    },
+    {
+      "id": "capacity_negative_0",
+      "context_id": "capacity",
+      "split": "test",
+      "category": "absent_event",
+      "label": "reject",
+      "text": "DELTA opened its new plant and began production.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "DELTA approved plans for a new plant; construction has not started."
+        }
+      }
+    },
+    {
+      "id": "capacity_negative_1",
+      "context_id": "capacity",
+      "split": "test",
+      "category": "scope_or_cause",
+      "label": "reject",
+      "text": "Traders bought DELTA because the plant will reduce costs.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {
+          "n1": "DELTA approved plans for a new plant; construction has not started."
+        }
+      }
+    },
+    {
+      "id": "empty_filing_positive_0",
+      "context_id": "empty_filing",
+      "split": "test",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "The supplied evidence contains no company news.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {}
+      }
+    },
+    {
+      "id": "empty_filing_positive_1",
+      "context_id": "empty_filing",
+      "split": "test",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "The available metrics cannot establish a company-specific catalyst.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {}
+      }
+    },
+    {
+      "id": "empty_filing_negative_0",
+      "context_id": "empty_filing",
+      "split": "test",
+      "category": "absent_event",
+      "label": "reject",
+      "text": "Management is likely negotiating a merger.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {}
+      }
+    },
+    {
+      "id": "empty_filing_negative_1",
+      "context_id": "empty_filing",
+      "split": "test",
+      "category": "scope_or_cause",
+      "label": "reject",
+      "text": "A regulator has reportedly launched an investigation.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "up"
+        },
+        "headlines": {}
+      }
+    },
+    {
+      "id": "return_window_positive_0",
+      "context_id": "return_window",
+      "split": "test",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "SIERRA announced a pilot rather than a signed commercial contract.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down",
+          "metrics.cumulative_return": "-8.00%",
+          "pct_change": "+3.00%"
+        },
+        "headlines": {
+          "n1": "SIERRA announced a pilot program, with no commercial contract signed."
+        }
+      }
+    },
+    {
+      "id": "return_window_positive_1",
+      "context_id": "return_window",
+      "split": "test",
+      "category": "supported_or_caution",
+      "label": "pass",
+      "text": "The cumulative return was negative despite a positive final session.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down",
+          "metrics.cumulative_return": "-8.00%",
+          "pct_change": "+3.00%"
+        },
+        "headlines": {
+          "n1": "SIERRA announced a pilot program, with no commercial contract signed."
+        }
+      }
+    },
+    {
+      "id": "return_window_negative_0",
+      "context_id": "return_window",
+      "split": "test",
+      "category": "absent_event",
+      "label": "reject",
+      "text": "SIERRA secured a long-term commercial contract.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down",
+          "metrics.cumulative_return": "-8.00%",
+          "pct_change": "+3.00%"
+        },
+        "headlines": {
+          "n1": "SIERRA announced a pilot program, with no commercial contract signed."
+        }
+      }
+    },
+    {
+      "id": "return_window_negative_1",
+      "context_id": "return_window",
+      "split": "test",
+      "category": "scope_or_cause",
+      "label": "reject",
+      "text": "SIERRA had a positive cumulative return across the window.",
+      "evidence": {
+        "metrics_and_context": {
+          "metrics.trend": "down",
+          "metrics.cumulative_return": "-8.00%",
+          "pct_change": "+3.00%"
+        },
+        "headlines": {
+          "n1": "SIERRA announced a pilot program, with no commercial contract signed."
+        }
+      }
+    }
+  ]
+}

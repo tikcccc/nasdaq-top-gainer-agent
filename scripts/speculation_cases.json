@@ -1,0 +1,96 @@
+{
+  "_about": "Labelled sentences for calibrating the guard's unsupported-causal-claim check. 'reject' = asserts a cause/motive/funding link the headlines do not state; 'pass' = reports evidence, describes moves, restates classifications, gives a standard mechanism or a clearly framed judgement. Evidence comes from the run given on the command line (AIOK, Oct 23 2026: special dividend [n1], LPG carrier sale [n2]). 'out_of_scope' = a different error type this check does not target; reported but not scored.",
+  "cases": [
+    {
+      "label": "reject",
+      "origin": "agent run 20261025_011851",
+      "text": "The distribution appears tied to selling the Dream Arrax, a return of asset-sale proceeds rather than recurring operating earnings [n1][n2]."
+    },
+    {
+      "label": "out_of_scope",
+      "origin": "agent run 20261025_011623",
+      "text": "The special dividend reprices the stock when it trades ex-dividend, so part of the quoted gain is cash distribution rather than value creation [n1].",
+      "note": "Misapplied mechanism (no ex-date yet, so no cash has left the price), not an invented causal link. Known limitation of this check."
+    },
+    {
+      "label": "reject",
+      "origin": "planted",
+      "text": "The dividend is funded by the proceeds of the vessel sale [n1][n2]."
+    },
+    {
+      "label": "reject",
+      "origin": "planted",
+      "text": "The rally was driven by short sellers covering their positions [n1]."
+    },
+    {
+      "label": "reject",
+      "origin": "planted",
+      "text": "Management timed the dividend to support the share price [n1]."
+    },
+    {
+      "label": "reject",
+      "origin": "planted",
+      "text": "Investors bought the shares because the vessel sale signals a turnaround [n2]."
+    },
+    {
+      "label": "reject",
+      "origin": "planted",
+      "text": "The company sold the carrier in order to pay the special dividend [n1][n2]."
+    },
+    {
+      "label": "reject",
+      "origin": "planted",
+      "text": "The surge was caused by a takeover rumour circulating among traders."
+    },
+    {
+      "label": "pass",
+      "origin": "agent run 20261025_011851",
+      "text": "The catalyst is a corporate action rather than an operating announcement: a special dividend paired with a vessel disposal [n1][n2]."
+    },
+    {
+      "label": "pass",
+      "origin": "agent run 20261025_011851",
+      "text": "Headline sentiment is positive at 74% confidence, classified as corporate action with dilution risk of 4% [n1][n2]."
+    },
+    {
+      "label": "pass",
+      "origin": "agent run 20261025_011851",
+      "text": "The declared special dividend puts an ex-dividend date on the calendar, when the shares will mechanically adjust lower by the payout [n1]."
+    },
+    {
+      "label": "pass",
+      "origin": "agent run 20261025_011623",
+      "text": "The catalysts are specific rather than thematic: the sale of the LPG carrier Dream Arrax and a declared special dividend [n1][n2]."
+    },
+    {
+      "label": "pass",
+      "origin": "hand-written draft",
+      "text": "Two announcements landed on the same day: a special cash dividend [n1] and the sale of one of its LPG carriers [n2]."
+    },
+    {
+      "label": "pass",
+      "origin": "hand-written draft",
+      "text": "The carrier sale has been announced, not completed [n2]."
+    },
+    {
+      "label": "pass",
+      "origin": "planted",
+      "text": "The company declared a special cash dividend [n1]."
+    },
+    {
+      "label": "pass",
+      "origin": "planted",
+      "text": "The shares rose on the same day the two announcements were published [n1][n2]."
+    },
+    {
+      "label": "pass",
+      "origin": "planted",
+      "text": "Both announcements were released on the trade date [n1][n2]."
+    },
+    {
+      "label": "pass",
+      "origin": "planted",
+      "text": "Headline sentiment is positive and the catalyst is classified as a corporate action [n1][n2]."
+    }
+  ]
+}

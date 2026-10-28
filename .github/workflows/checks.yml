@@ -1,0 +1,42 @@
+name: Checks
+on: [push, pull_request]
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.13'
+      - run: uv sync --extra ui --locked
+      - run: uv run pytest -q
+      - run: uv run python scripts/eval_agent.py --mode contract --split test --output outputs/eval/contracts.json
+      - run: uv run python scripts/eval_historical.py --output outputs/eval/historical-contracts.json
+  docker-sandbox:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.13'
+      - run: uv sync --extra ui --locked
+      - run: docker build -t nasdaq-analysis:local -f nasdaq_agent/sandbox/Dockerfile .
+      - run: uv run pytest tests/test_docker_sandbox.py -q
+        env:
+          RUN_DOCKER_TESTS: '1'
+  web:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run build

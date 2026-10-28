@@ -1,0 +1,40 @@
+[project]
+name = "nasdaq-agent"
+version = "0.1.0"
+description = "Autonomous LangGraph agent that finds the day's top NASDAQ gainer, analyses it with self-written code and emails a report."
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=1.2,<2",
+    "langgraph-checkpoint-sqlite>=2",
+    "langchain>=1.4,<2",
+    "langchain-openai>=1.7,<2",
+    "yfinance>=1.7",
+    "exchange-calendars>=4.13",
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+    "jinja2>=3.1",
+    "httpx>=0.27",
+    "tenacity>=9",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.6",
+    "pyyaml>=6",
+    "python-dotenv>=1",
+]
+
+[project.optional-dependencies]
+# Recommended: TypeSafe Jev headline sentiment. Without it the chat model scores sentiment.
+jev = ["typesafe-sdk>=0.7,<1"]
+# The dashboard backend enables Jev by default, so it includes the jev extra.
+ui = ["fastapi>=0.115", "uvicorn>=0.32", "nasdaq-agent[jev]"]
+
+[dependency-groups]
+dev = ["pytest>=8", "respx>=0.21"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::FutureWarning"]

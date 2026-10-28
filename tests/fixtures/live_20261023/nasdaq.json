@@ -1,0 +1,584 @@
+{
+ "source": "api.nasdaq.com/api/screener/stocks and /api/quote/{symbol}/historical",
+ "retrieved_at_utc": "2026-10-25T06:10:46.355697+00:00",
+ "expected_trade_date": "2026-10-23",
+ "note": "Captured on a Sunday: the screener still served 2026-10-22 prices.",
+ "screener_rows": [
+  {
+   "symbol": "TANH",
+   "name": "Tantech Holdings Ltd. Class A Common Shares",
+   "price": 24.83,
+   "pct_change": 181.839,
+   "net_change": 16.02,
+   "volume": 2212652,
+   "market_cap": 16577675.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "HUBCZ",
+   "name": "Hub Cyber Security Ltd. Warrant ",
+   "price": 0.0178,
+   "pct_change": 154.286,
+   "net_change": 0.0108,
+   "volume": 512,
+   "market_cap": 23799.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "SHFS",
+   "name": "SHF Holdings Inc. Class A Common Stock",
+   "price": 0.3429,
+   "pct_change": 122.374,
+   "net_change": 0.1887,
+   "volume": 956552243,
+   "market_cap": 352414.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "XLABW",
+   "name": "Exascale Labs Holdings Inc. Warrant",
+   "price": 0.3804,
+   "pct_change": 100.211,
+   "net_change": 0.1904,
+   "volume": 851796,
+   "market_cap": 24472954.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "XLAB",
+   "name": "Exascale Labs Holdings Inc. Class A Common Stock",
+   "price": 4.71,
+   "pct_change": 73.162,
+   "net_change": 1.99,
+   "volume": 67907255,
+   "market_cap": 303016856.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "STAK",
+   "name": "STAK Inc. Class A Ordinary Shares",
+   "price": 1.67,
+   "pct_change": 67.0,
+   "net_change": 0.67,
+   "volume": 84115928,
+   "market_cap": 32081283.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "SLXNW",
+   "name": "Silexion Therapeutics Corp Warrant",
+   "price": 0.01,
+   "pct_change": 66.667,
+   "net_change": 0.004,
+   "volume": 349951,
+   "market_cap": 144733.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "SHFSW",
+   "name": "SHF Holdings Inc. Warrants",
+   "price": 0.0206,
+   "pct_change": 63.492,
+   "net_change": 0.008,
+   "volume": 1067123,
+   "market_cap": 21172.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "BCGWW",
+   "name": "Binah Capital Group Inc. Warrants",
+   "price": 0.065,
+   "pct_change": 60.099,
+   "net_change": 0.0244,
+   "volume": 807,
+   "market_cap": 1108909.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "HOLOW",
+   "name": "MicroCloud Hologram Inc. Warrant",
+   "price": 0.0483,
+   "pct_change": 59.934,
+   "net_change": 0.0181,
+   "volume": 723,
+   "market_cap": 1106667.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "PASW",
+   "name": "Ping An Biomedical Co. Ltd. Class A Ordinary Shares",
+   "price": 0.134,
+   "pct_change": 45.652,
+   "net_change": 0.042,
+   "volume": 7607676,
+   "market_cap": 16765678.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "CRMT",
+   "name": "America's Car-Mart Inc Common Stock",
+   "price": 0.9464,
+   "pct_change": 43.459,
+   "net_change": 0.2867,
+   "volume": 5397963,
+   "market_cap": 7891536.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "NCPL",
+   "name": "Netcapital Inc. Common Stock",
+   "price": 2.23,
+   "pct_change": 42.038,
+   "net_change": 0.66,
+   "volume": 24270902,
+   "market_cap": 17881094.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "YHC",
+   "name": "LQR House Inc. Common Stock",
+   "price": 2.5,
+   "pct_change": 39.665,
+   "net_change": 0.71,
+   "volume": 928940,
+   "market_cap": 3259643.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "NWCLW",
+   "name": "newcleo plc Warrants",
+   "price": 0.57,
+   "pct_change": 39.024,
+   "net_change": 0.16,
+   "volume": 40162,
+   "market_cap": 160474922.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "TROO",
+   "name": "TROOPS Inc. Ordinary Shares ",
+   "price": 2.32,
+   "pct_change": 38.922,
+   "net_change": 0.65,
+   "volume": 1801877,
+   "market_cap": 283411585.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "VFSWW",
+   "name": "VinFast Auto Ltd. Warrant",
+   "price": 0.2696,
+   "pct_change": 34.8,
+   "net_change": 0.0696,
+   "volume": 2529,
+   "market_cap": 630738908.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "BNAIW",
+   "name": "Brand Engagement Network Inc. Warrant",
+   "price": 0.0806,
+   "pct_change": 33.887,
+   "net_change": 0.0204,
+   "volume": 200,
+   "market_cap": 604757.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "CRACR",
+   "name": "Crown Reserve Acquisition Corp. I Rights",
+   "price": 0.09,
+   "pct_change": 33.136,
+   "net_change": 0.0224,
+   "volume": 200,
+   "market_cap": 0.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "BIAFW",
+   "name": "bioAffinity Technologies Inc. Warrant",
+   "price": 0.4191,
+   "pct_change": 33.048,
+   "net_change": 0.1041,
+   "volume": 201,
+   "market_cap": 537777.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "ESLA",
+   "name": "Estrella Immunopharma Inc. Common Stock",
+   "price": 0.7268,
+   "pct_change": 32.145,
+   "net_change": 0.1768,
+   "volume": 6850993,
+   "market_cap": 31614248.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "QSEAR",
+   "name": "Quartzsea Acquisition Corporation Rights",
+   "price": 0.2499,
+   "pct_change": 31.388,
+   "net_change": 0.0597,
+   "volume": 1012,
+   "market_cap": 0.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "BKYI",
+   "name": "BIO-key International Inc. Common Stock",
+   "price": 2.74,
+   "pct_change": 30.476,
+   "net_change": 0.64,
+   "volume": 32440116,
+   "market_cap": 5576308.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "VIVK",
+   "name": "Vivakor Inc. Common Stock",
+   "price": 1.63,
+   "pct_change": 30.4,
+   "net_change": 0.38,
+   "volume": 3279543,
+   "market_cap": 2617803.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "KRRO",
+   "name": "Korro Bio Inc. Common Stock",
+   "price": 12.05,
+   "pct_change": 29.709,
+   "net_change": 2.76,
+   "volume": 476554,
+   "market_cap": 177444034.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  },
+  {
+   "symbol": "AIOK",
+   "name": "AI OKTO CORP. Common Stock",
+   "price": 4.25,
+   "pct_change": -12.19,
+   "net_change": -0.59,
+   "volume": 29809,
+   "market_cap": 18359643.0,
+   "exchange": "NASDAQ",
+   "market_time": null
+  }
+ ],
+ "history": {
+  "TANH": [
+   {
+    "date": "2026-10-23",
+    "close": 17.71,
+    "volume": 616285.0
+   },
+   {
+    "date": "2026-10-22",
+    "close": 24.83,
+    "volume": 2212208.0
+   },
+   {
+    "date": "2026-10-21",
+    "close": 8.81,
+    "volume": 26261.0
+   },
+   {
+    "date": "2026-10-20",
+    "close": 10.13,
+    "volume": 289577.0
+   },
+   {
+    "date": "2026-10-19",
+    "close": 10.2,
+    "volume": 177696.0
+   },
+   {
+    "date": "2026-10-16",
+    "close": 13.62,
+    "volume": 34986.0
+   }
+  ],
+  "XLAB": [
+   {
+    "date": "2026-10-23",
+    "close": 3.35,
+    "volume": 7647640.0
+   },
+   {
+    "date": "2026-10-22",
+    "close": 4.71,
+    "volume": 67907080.0
+   },
+   {
+    "date": "2026-10-21",
+    "close": 2.72,
+    "volume": 2667666.0
+   },
+   {
+    "date": "2026-10-20",
+    "close": 2.99,
+    "volume": 8460665.0
+   },
+   {
+    "date": "2026-10-19",
+    "close": 3.06,
+    "volume": 71538380.0
+   },
+   {
+    "date": "2026-10-16",
+    "close": 2.35,
+    "volume": 171624600.0
+   }
+  ],
+  "STAK": [
+   {
+    "date": "2026-10-23",
+    "close": 1.74,
+    "volume": 15111610.0
+   },
+   {
+    "date": "2026-10-22",
+    "close": 1.67,
+    "volume": 84116580.0
+   },
+   {
+    "date": "2026-10-21",
+    "close": 1.0,
+    "volume": 23559780.0
+   },
+   {
+    "date": "2026-10-20",
+    "close": 1.01,
+    "volume": 197687.0
+   },
+   {
+    "date": "2026-10-19",
+    "close": 1.0,
+    "volume": 147231.0
+   },
+   {
+    "date": "2026-10-16",
+    "close": 1.015,
+    "volume": 202633.0
+   }
+  ],
+  "NCPL": [
+   {
+    "date": "2026-10-23",
+    "close": 1.33,
+    "volume": 10106300.0
+   },
+   {
+    "date": "2026-10-22",
+    "close": 2.23,
+    "volume": 24270580.0
+   },
+   {
+    "date": "2026-10-21",
+    "close": 1.57,
+    "volume": 9133206.0
+   },
+   {
+    "date": "2026-10-20",
+    "close": 2.02,
+    "volume": 12883570.0
+   },
+   {
+    "date": "2026-10-19",
+    "close": 1.63,
+    "volume": 3590745.0
+   },
+   {
+    "date": "2026-10-16",
+    "close": 2.17,
+    "volume": 24245140.0
+   }
+  ],
+  "YHC": [
+   {
+    "date": "2026-10-23",
+    "close": 3.0,
+    "volume": 318830.0
+   },
+   {
+    "date": "2026-10-22",
+    "close": 2.5,
+    "volume": 928929.0
+   },
+   {
+    "date": "2026-10-21",
+    "close": 1.79,
+    "volume": 63026.0
+   },
+   {
+    "date": "2026-10-20",
+    "close": 1.78,
+    "volume": 209833.0
+   },
+   {
+    "date": "2026-10-19",
+    "close": 1.98,
+    "volume": 3608148.0
+   },
+   {
+    "date": "2026-10-16",
+    "close": 1.72,
+    "volume": 22705.0
+   }
+  ],
+  "TROO": [
+   {
+    "date": "2026-10-23",
+    "close": 2.35,
+    "volume": 1256310.0
+   },
+   {
+    "date": "2026-10-22",
+    "close": 2.32,
+    "volume": 1801758.0
+   },
+   {
+    "date": "2026-10-21",
+    "close": 1.67,
+    "volume": 519204.0
+   },
+   {
+    "date": "2026-10-20",
+    "close": 1.63,
+    "volume": 61072.0
+   },
+   {
+    "date": "2026-10-19",
+    "close": 1.67,
+    "volume": 182543.0
+   },
+   {
+    "date": "2026-10-16",
+    "close": 1.65,
+    "volume": 208403.0
+   }
+  ],
+  "BKYI": [
+   {
+    "date": "2026-10-23",
+    "close": 3.39,
+    "volume": 35318580.0
+   },
+   {
+    "date": "2026-10-22",
+    "close": 2.74,
+    "volume": 32439790.0
+   },
+   {
+    "date": "2026-10-21",
+    "close": 2.1,
+    "volume": 152101.0
+   },
+   {
+    "date": "2026-10-20",
+    "close": 2.3,
+    "volume": 135135.0
+   },
+   {
+    "date": "2026-10-19",
+    "close": 2.27,
+    "volume": 247929.0
+   },
+   {
+    "date": "2026-10-16",
+    "close": 2.63,
+    "volume": 353148.0
+   }
+  ],
+  "VIVK": [
+   {
+    "date": "2026-10-23",
+    "close": 1.46,
+    "volume": 757224.0
+   },
+   {
+    "date": "2026-10-22",
+    "close": 1.63,
+    "volume": 3279450.0
+   },
+   {
+    "date": "2026-10-21",
+    "close": 1.25,
+    "volume": 249749.0
+   },
+   {
+    "date": "2026-10-20",
+    "close": 1.27,
+    "volume": 206881.0
+   },
+   {
+    "date": "2026-10-19",
+    "close": 1.39,
+    "volume": 277996.0
+   },
+   {
+    "date": "2026-10-16",
+    "close": 1.48,
+    "volume": 435811.0
+   }
+  ],
+  "AIOK": [
+   {
+    "date": "2026-10-23",
+    "close": 12.02,
+    "volume": 42891980.0
+   },
+   {
+    "date": "2026-10-22",
+    "close": 4.25,
+    "volume": 29791.0
+   },
+   {
+    "date": "2026-10-21",
+    "close": 4.84,
+    "volume": 45901.0
+   },
+   {
+    "date": "2026-10-20",
+    "close": 4.93,
+    "volume": 67969.0
+   },
+   {
+    "date": "2026-10-19",
+    "close": 3.98,
+    "volume": 44275.0
+   },
+   {
+    "date": "2026-10-16",
+    "close": 4.2,
+    "volume": 55344.0
+   }
+  ]
+ }
+}

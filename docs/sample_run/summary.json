@@ -1,0 +1,168 @@
+{
+  "run_id": "20261024_232545_72e8",
+  "status": "ok",
+  "exit_code": 0,
+  "elapsed_s": 39.4,
+  "models": "mimo:mimo-v2.6-pro-ultraspeed -> deepseek:deepseek-flash",
+  "trade_date": "2026-10-23",
+  "raw_top": {
+    "symbol": "ADNWW",
+    "pct_change": 2799.998,
+    "flags": [
+      "derivative",
+      "penny"
+    ]
+  },
+  "selected": {
+    "symbol": "AIOK",
+    "name": "AI OKTO CORP.",
+    "pct_change": 182.824,
+    "price": 12.02,
+    "volume": 41847594,
+    "flags": [],
+    "days": 5
+  },
+  "analysis": {
+    "symbol": "AIOK",
+    "days": 5,
+    "daily_returns": [
+      -0.05238090480536073,
+      0.23869341826945245,
+      -0.018255512958316178,
+      -0.12190085412960672,
+      1.8282354018267464
+    ],
+    "avg_daily_return": 0.37487830964058305,
+    "cumulative_return": 1.8619050008639837,
+    "trend": "up",
+    "trend_slope": 0.2708843899174821,
+    "volatility_daily": 0.8238154129418166,
+    "volatility_annualized": 13.07766425319617,
+    "max_drawdown": -0.13793100446573003,
+    "benchmark": {
+      "GSPC": -0.004668718065362176,
+      "IXIC": -0.0070653881457998224
+    },
+    "excess_return": 1.8665737189293459,
+    "notes": "Window 2026-10-16 to 2026-10-23; sharp single-day surge on the final session."
+  },
+  "sentiment": {
+    "method": "jev",
+    "n_headlines": 2,
+    "score": 3.14,
+    "label": "Positive",
+    "confidence": 0.75,
+    "catalyst": "corporate_action",
+    "catalyst_confidence": 0.98,
+    "dilution_risk": 0.04,
+    "uncertain": false,
+    "headline_ids": [
+      "n1",
+      "n2"
+    ]
+  },
+  "headlines": {
+    "n1": {
+      "id": "n1",
+      "title": "AI OKTO Corp. Declares Special Dividend of $3.50 Per Share",
+      "publisher": "GlobeNewswire",
+      "published": "2026-10-23T13:24:00+00:00",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/ai-okto-corp-declares-special-132400228.html",
+      "source": "yahoo"
+    },
+    "n2": {
+      "id": "n2",
+      "title": "AI OKTO Announces the Sale of the LPG Carrier Dream Arrax",
+      "publisher": "GlobeNewswire",
+      "published": "2026-10-23T12:55:00+00:00",
+      "link": "https://finance.yahoo.com/energy/articles/ai-okto-announces-sale-lpg-125500121.html",
+      "source": "yahoo"
+    }
+  },
+  "email": {
+    "subject": "[NASDAQ Top Gainer] AIOK +182.82% · 2026-10-23",
+    "recipients": [
+      "<recipient>"
+    ],
+    "fallback": false,
+    "eml_path": "email.eml",
+    "html_path": "email.html",
+    "message_id": "<179285558368.67952.3963742964243430414@nasdaq-agent.local>",
+    "status": "dry_run",
+    "narrative": "On 2026-10-23, the top NASDAQ common-stock gainer was AIOK (AI OKTO CORP.), which surged +182.82% to $12.02 on heavy volume of 41,847,594. The unfiltered list-topper was actually ADNWW, a warrant that jumped +2800.00% (flags: derivative, penny), but as a derivative penny instrument it was excluded in favour of the highest-ranked qualifying common stock, AIOK, which carried no data-quality flags.\n\nOver the last 5 trading days, AIOK posted a cumulative return of +186.19% with an average daily move of +37.49%, driven by the final-session rally — its best day was +182.82% and its worst day was -12.19%. The overall trend is classified as up, though daily volatility of 82.38% annualises to 1308% and the window's maximum drawdown reached -13.79%. By comparison, the S&P 500 returned -0.47% and the NASDAQ Composite -0.71% over the same dates, leaving AIOK with an excess return of +186.66% versus the S&P 500.\n\nTwo headlines appeared on the trade date: one declaring a special cash dividend per share [n1] and one announcing the sale of the LPG carrier Dream Arrax [n2]. Sentiment analysis of these headlines scores positive at 3.1/4 with confidence 75%, the catalyst classified as corporate action, and dilution risk estimated at 4%.\n\nCaveats: the price history passed cross-source and corporate-action checks with no flags, but nearly all of the window's gain came in a single session and the volatility measures are elevated, so the move may not be representative of longer-run behaviour. This report is informational only and contains no buy or sell advice.",
+    "citations": [
+      "n1",
+      "n2"
+    ]
+  },
+  "plan": {
+    "version": 1,
+    "steps": [
+      "Get top NASDAQ gainers with get_top_nasdaq_gainers",
+      "Filter for top common stock if raw top is flagged",
+      "Fetch price history for chosen symbol",
+      "Run Python analysis over last 5 trading days",
+      "Fetch news and analyze sentiment",
+      "Email final report with send_email"
+    ],
+    "reason": null,
+    "history": []
+  },
+  "checks": {
+    "cross_source": {
+      "screener_pct": 182.824,
+      "history_pct": 182.82354018267463,
+      "gap_pp": 0.00045981732537825337,
+      "status": "ok",
+      "message": "screener and history agree (0.00pp)",
+      "flags": []
+    },
+    "corporate_actions": [],
+    "processing": [
+      "columns normalised; split-adjusted closes (not dividend-adjusted)"
+    ],
+    "guard": {
+      "passed": true,
+      "method": "jev",
+      "rendered_preview": "On 2026-10-23, the top NASDAQ common-stock gainer was AIOK (AI OKTO CORP.), which surged +182.82% to $12.02 on heavy volume of 41,847,594. The unfiltered list-topper was actually ADNWW, a warrant that jumped +2800.00% (flags: derivative, penny), but as a derivative penny instrument it was excluded in favour of the highest-ranked qualifying common stock, AIOK, which carried no data-quality flags.\n\n"
+    }
+  },
+  "sources": {
+    "screener": "yahoo",
+    "history": "yahoo",
+    "benchmark ^GSPC": "yahoo",
+    "benchmark ^IXIC": "yahoo",
+    "news": "yahoo",
+    "sentiment": "jev"
+  },
+  "llm_calls": 8,
+  "tool_attempts": {
+    "record_plan": 1,
+    "get_top_nasdaq_gainers": 2,
+    "get_price_history": 1,
+    "get_news": 1,
+    "execute_python": 1,
+    "analyze_sentiment": 1,
+    "send_email": 1
+  },
+  "tool_failures": {},
+  "guard_rejections": 2,
+  "warnings": [],
+  "errors": [
+    {
+      "tool": "guard",
+      "type": "guard_rejected",
+      "message": "literal figures ['$3.50'] found; replace each with a placeholder"
+    },
+    {
+      "tool": "guard",
+      "type": "guard_rejected",
+      "message": "paragraph 3 ('The news flow points to concrete corporate catalysts: the co...') is only 0.33 supported by the data (threshold 0.7); correct or remove claims in it that the data does not show | paragraph 4 ('Caveats: price history passed cross-source and corporate-act...') is only 0.68 supported by the data (threshold 0.7); correct or remove claims in it that the data does not show"
+    }
+  ],
+  "degraded": [],
+  "stop_reason": null,
+  "charts": [
+    "chart.png"
+  ]
+}

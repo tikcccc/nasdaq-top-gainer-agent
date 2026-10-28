@@ -1,0 +1,102 @@
+services:
+  # Keep the dynamically used sandbox image referenced between analysis jobs.
+  # Coolify's unused-image cleanup must not remove it while no job is running.
+  sandbox-image:
+    image: nasdaq-analysis:local
+    pull_policy: never
+    restart: unless-stopped
+    entrypoint: ["python", "-c", "import time; time.sleep(2147483647)"]
+    network_mode: none
+    read_only: true
+    user: "65534:65534"
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 32m
+    pids_limit: 16
+    cpus: 0.1
+    healthcheck:
+      test: ["CMD", "python", "-c", "pass"]
+      interval: 60s
+      timeout: 5s
+      retries: 3
+
+  gateway:
+    build:
+      context: ./deploy
+      dockerfile: Dockerfile.gateway
+    restart: unless-stopped
+    expose:
+      - "80"
+    depends_on:
+      api:
+        condition: service_healthy
+      web:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1/healthz"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: ""
+    restart: unless-stopped
+    expose:
+      - "3000"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      start_period: 30s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      sandbox-image:
+        condition: service_started
+    expose:
+      - "8000"
+    environment:
+      NASDAQ_ENV_FILE: none
+      RUN_OUTPUT_DIR: /data/nasdaq-top-gainer/outputs
+      SANDBOX_BACKEND: docker
+      SANDBOX_IMAGE: nasdaq-analysis:local
+      LLM_PROVIDER: ${LLM_PROVIDER:-mimo}
+      LLM_FALLBACK_ORDER: ${LLM_FALLBACK_ORDER:-mimo,deepseek,openai}
+      MIMO_API_KEY: ${MIMO_API_KEY}
+      MIMO_BASE_URL: ${MIMO_BASE_URL:-https://api.xiaomimimo.com/v1}
+      MIMO_MODEL: ${MIMO_MODEL:-mimo-v2.6-pro-ultraspeed}
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY}
+      DEEPSEEK_BASE_URL: ${DEEPSEEK_BASE_URL:-https://api.deepseek.com}
+      DEEPSEEK_MODEL: ${DEEPSEEK_MODEL:-deepseek-flash}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL:-https://api.openai.com/v1}
+      OPENAI_MODEL: ${OPENAI_MODEL}
+      JEV_ENABLED: ${JEV_ENABLED:-true}
+      TYPESAFE_API_KEY: ${TYPESAFE_API_KEY}
+      TYPESAFE_BASE_URL: ${TYPESAFE_BASE_URL:-https://api.typesafe.ai}
+      JEV_MODEL: ${JEV_MODEL:-jev-latest}
+      SMTP_HOST: ${SMTP_HOST:-smtp.gmail.com}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USER: ${SMTP_USER}
+      SMTP_PASSWORD: ${SMTP_PASSWORD}
+      EMAIL_FROM: ${EMAIL_FROM}
+      EMAIL_TO: ${EMAIL_TO:-}
+      EMAIL_DRY_RUN: ${EMAIL_DRY_RUN:-false}
+    volumes:
+      - /data/nasdaq-top-gainer/outputs:/data/nasdaq-top-gainer/outputs
+      - /var/run/docker.sock:/var/run/docker.sock
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/config', timeout=3)"]
+      interval: 15s
+      timeout: 5s
+      start_period: 30s
+      retries: 5
